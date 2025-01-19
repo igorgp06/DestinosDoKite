@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+/* vaiables */
+
+:root {
+    /* palheta de cores */
+    --skuBlue-1: rgba(220, 233, 242, 1);
+    --skuBlue-2: rgba(186, 220, 242, 1);
+    --skuBlue-3: rgba(133, 200, 242, 1);
+    --skuBlue-4: rgba(121, 185, 242, 1);
+    --skuBlue-5: rgba(66, 78, 89, 1);
+
+    /* substuição das cores do bootstrap */
+}
+
