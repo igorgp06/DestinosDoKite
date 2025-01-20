@@ -40,10 +40,10 @@
 }
 
 .navbar .logo a:hover {
-    color: var(--Blue-1);
+    color: var(--Blue-2);
     font-size: 2.2rem;
     & .destaque {
-        color: black;
+        color: var(--Blue-2);
         font-size: 2.2rem;
     }
 }
@@ -51,7 +51,7 @@
 .menu-icon {
     font-size: 2.2rem;
     z-index: 999;
-    margin-right: 2rem;
+    margin-right: 1rem;
     cursor: pointer;
     user-select: none;
 }
@@ -90,7 +90,7 @@
     right: 0;
     top: 0;
     margin: 1.3rem auto;
-    margin-right: 7%;
+    margin-right: 2%;
     cursor: pointer;
 }
 
@@ -120,3 +120,34 @@
     transition: all 0.4s ease-in-out;
 }
 
+@media (max-width: 474px) {
+    .navbar .logo a {
+        font-size: 1.8rem;
+    }
+
+    .navbar .logo .destaque {
+        font-size: 1.8rem;
+    }
+
+    .menu-icon {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
+
+    .close-icon {
+        font-size: 1.8rem;
+        margin: 0.5rem 1rem 0 0;
+    }
+
+    .navbar-list {
+        gap: 0.5rem;
+    }
+
+    .navbar-list .p-ul-menu {
+        font-size: 1.5rem;
+    }
+
+    .navbar-list li a {
+        font-size: 1.2rem;
+    }
+}

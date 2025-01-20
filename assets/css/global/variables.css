@@ -11,5 +11,9 @@
     --Blue-5: rgb(79, 91, 115);
 
     /* substuição das cores do bootstrap */
+    --bs-primary: var(--Blue-1);
+    --bs-secondary: var(--Blue-2);
+    --bs-success: var(--Blue-3);
+    --bs-info: var(--Blue-4);
+    --bs-warning: var(--Blue-5);
 }
-
