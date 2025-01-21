@@ -83,6 +83,52 @@
     }
 }
 
+@media (max-width: 1399px) {
+    .hero .page-subtitle {
+        font-size: 1.9rem;
+    }
+}
+
+@media (max-width: 1199px) {
+    .hero .page-title {
+        font-size: 3rem;
+    }
+
+    .hero .page-subtitle {
+        font-size: 1.6rem;
+    }
+
+    .hero .hero-description {
+        font-size: 1rem;
+    }
+
+    .hero .hero-buttons button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .hero .page-title {
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    .hero .page-subtitle {
+        font-size: 1.3rem;
+        margin: 0.8rem;
+    }
+
+    .hero .hero-description {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .hero .hero-buttons button {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+}
+
 @media (max-width: 767px) {
     body {
         overflow: auto;
