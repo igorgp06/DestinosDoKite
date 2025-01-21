@@ -4,5 +4,5 @@
 @import url('../global/global.css');
 
 /* import css partials */
-@import url('partials/header.css');
-@import url('partials/hero.css');
+@import url('pages/main/hero.css');
+@import url('pages/who-we-are/who-we-are.css');

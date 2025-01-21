@@ -77,7 +77,7 @@
     border-radius: 2rem;
 }
 
-@media (max-width: 1880px) {
+@media (min-width: 1756px) {
     body {
         overflow: hidden;
     }
@@ -132,5 +132,32 @@
 @media (max-width: 767px) {
     body {
         overflow: auto;
+    }
+
+    .hero .page-title {
+        font-size: 2.2rem;
+        margin-top: 0.8rem;
+    }
+}
+
+@media (max-width: 474px) {
+    .hero .page-title {
+        font-size: 2rem;
+        margin-top: 0.8rem;
+    }
+
+    .hero .page-subtitle {
+        font-size: 1.1rem;
+        margin: 0.5rem;
+    }
+
+    .hero .hero-description {
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .hero .hero-buttons button {
+        font-size: 0.8rem;
+        margin-bottom: 0.8rem;
     }
 }
