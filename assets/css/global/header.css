@@ -64,11 +64,11 @@
     right: -100%;
     background-color: var(--Blue-4);
     z-index: 9999;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    opacity: 0;
     user-select: none;
     transition: right 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
@@ -99,7 +99,7 @@
     padding: 7%;
     background-color: var(--Blue-2);
     border-radius: 1rem;
-    gap: 1rem;
+    gap: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,15 +109,20 @@
 
 .navbar-list .p-ul-menu {
     color: black;
-    font-size: 2rem;
+    font-size: 2.2rem;
     font-weight: 700;
+    margin-bottom: 1rem;
 }
 
 .navbar-list li a {
     color: black;
-    font-size: 1.5rem;
-    font-weight: 550;
-    transition: all 0.4s ease-in-out;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: color 0.4s ease-in-out;
+}
+
+.navbar-list li a:hover {
+    color: var(--Blue-1);
 }
 
 @media (max-width: 474px) {

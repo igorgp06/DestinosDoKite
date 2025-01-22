@@ -115,7 +115,7 @@
 
     .hero .page-subtitle {
         font-size: 1.3rem;
-        margin: 0.8rem;
+        margin: 0.5rem;
     }
 
     .hero .hero-description {
@@ -136,14 +136,14 @@
 
     .hero .page-title {
         font-size: 2.2rem;
-        margin-top: 0.8rem;
+        margin-top: 0.5rem;
     }
 }
 
 @media (max-width: 474px) {
     .hero .page-title {
         font-size: 2rem;
-        margin-top: 0.8rem;
+        margin-top: 0.5rem;
     }
 
     .hero .page-subtitle {
@@ -158,6 +158,6 @@
 
     .hero .hero-buttons button {
         font-size: 0.8rem;
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
     }
 }
