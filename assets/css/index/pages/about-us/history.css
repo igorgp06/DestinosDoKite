@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+/* history */
+
+.history {
+    margin: 0 auto;
+    padding: 1rem;
+    height: auto;
+    min-height: 95vh;
+    background-color: var(--Blue-2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.history-text {
+    margin: 0;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.history-subtitle {
+    font-size: 3rem;
+    font-weight: 650;
+    color: var(--Blue-1);
+}
+
+.history-description {
+    font-size: 1.1rem;
+    font-weight: 500;
+}

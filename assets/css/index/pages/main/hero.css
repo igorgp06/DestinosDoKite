@@ -4,7 +4,7 @@
 
 .hero {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 0;
     height: auto;
     min-height: 94vh;
     background-color: var(--Blue-2);
@@ -23,7 +23,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
 
 .hero-description {
@@ -77,12 +76,6 @@
     border-radius: 2rem;
 }
 
-@media (min-width: 1756px) {
-    body {
-        overflow: hidden;
-    }
-}
-
 @media (max-width: 1399px) {
     .hero .page-subtitle {
         font-size: 1.9rem;
@@ -130,13 +123,15 @@
 }
 
 @media (max-width: 767px) {
-    body {
-        overflow: auto;
-    }
-
     .hero .page-title {
         font-size: 2.2rem;
         margin-top: 0.5rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .hero {
+        min-height: 90vh;
     }
 }
 

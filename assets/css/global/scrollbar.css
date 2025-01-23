@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+@charset "UTF-8";
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+    width: 6px;
+    color: var(--Blue-2);
+    transition: all 0.4s ease;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Blue-3);
+    border-radius: 5px;
+    width: 5px;
+    transition: all 0.4s ease;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--Blue-5);
+    border-radius: 5px;
+    width: 5px;
+    transition: all 0.4s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--Blue-2);
+}
+
+::-webkit-scrollbar-track:hover {
+    background: var(--Blue-2);
+}
