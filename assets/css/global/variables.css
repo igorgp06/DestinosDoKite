@@ -1,14 +1,14 @@
 @charset "UTF-8";
 
-/* vaiables */
+/* variables */
 
 :root {
     /* palheta de cores */
     --Blue-1: rgb(242, 242, 242);
-    --Blue-2: rgb(176, 181, 191);
-    --Blue-3: rgb(143, 150, 166);
+    --Blue-2: rgb(191, 199, 217);
+    --Blue-3: rgb(121, 127, 141);
     --Blue-4: rgb(108, 119, 140);
-    --Blue-5: rgb(79, 91, 115);
+    --Blue-5: rgb(77, 83, 115);
 
     /* substuição das cores do bootstrap */
     --bs-primary: var(--Blue-1);
