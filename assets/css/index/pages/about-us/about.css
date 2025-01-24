@@ -26,11 +26,11 @@
 }
 
 .about-card-group {
+    gap: 0.5rem;
+    margin-top: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.5rem;
-    margin-top: 0.5rem;
 }
 
 .about-card-group .card {
@@ -77,4 +77,32 @@
     font-weight: 550;
     color: black;
     text-align: center;
+}
+
+@media (max-width: 767px) {
+    .about .page-subtitle {
+        margin: 1rem 0;
+    }
+
+    .about-description {
+        margin: 1.5rem 0;
+    }
+}
+
+@media (max-width: 500px) {
+    .about-card-group .card {
+        flex: 1 1 calc(100% - 1rem);
+    }
+
+    .about-card-group .card-title {
+        font-size: 1.2rem;
+    }
+
+    .about-card-group .card-text {
+        font-size: 0.9rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
 }
