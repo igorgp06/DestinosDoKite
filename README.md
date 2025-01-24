@@ -1,6 +1,7 @@
-# Web Vlog Destinos do Kite
+# Website Destinos do Kite
 
-
+Um site criado para divulgar a história e o guia do Destinos do Kite. Conheça a história dos criadores, veja os lugares mais interessantes 
+para se andar de Kite através do guia e muito mais!
 
 
 ## Controle Versional (GIT)
