@@ -1,8 +1,6 @@
-# Website Destinos do Kite
+# Web site Destinos do Kite
 
-Um site criado para divulgar a história e o guia do Destinos do Kite. Conheça a história dos criadores, veja os lugares mais interessantes 
-para se andar de Kite através do guia e muito mais!
-
+Um web site desenvolvido para ajudar a guiar e conhecer as escolas de kite por todo o Brasil. Conheça as escolas, suas informações, como entrar e contato e muito mais através deste site!
 
 ## Controle Versional (GIT)
 
@@ -23,6 +21,10 @@ O projeto segue o seguinte padrão de sufixos:
 ## Bugs
 
 Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão listados aqui com o seu ID, uma breve descrição, a versão em que foi encontrado e em qual versão foi solucionado.
+
+- [x] Bug 1: os elementos do header estão colados com a logo ao invés de permaneceram nos extremos opostos. Encontrado na versão 4.2, resolvido na versão 4.3.
+
+- [x] Bug 2: os itens de navegação do header deveriam sumir em telas pequenas e aparecer no menu, porém isso não acontece. Encontrado na versão 4.2, resolvido na versão 4.3.
 
 ## Licença
 

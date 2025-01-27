@@ -20,6 +20,10 @@
     background-repeat: no-repeat;
 }
 
+.hero .page-title .destaque {
+    text-decoration: underline;
+}
+
 .hero-text {
     margin: 0;
     display: flex;
@@ -30,9 +34,9 @@
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    font-weight: 550;
+    font-size: 1.2rem;
     color: black;
+    font-family: var(--Padrao);
 }
 
 .hero-buttons {
@@ -44,40 +48,25 @@
 }
 
 .hero-buttons button {
-    padding: 0.5rem 1rem;
-    border-radius: 1rem;
-    background-color: var(--Blue-3);
+    padding: 0.6rem;
     font-size: 1.1rem;
-    font-weight: 550;
+    font-weight: 500;
     border: none;
+    border-radius: 1.8rem;
+    background-color: var(--Blue-3);
+    color: white;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
-}
-
-.hero-buttons a {
-    color: black;
-    text-decoration: none;
     transition: all 0.4s ease-in-out;
 }
 
 .hero-buttons button:hover {
     background-color: var(--Blue-5);
-    transform: scale(1.1);
-    & a {
-        color: var(--Blue-1);
-    }
+    scale: 1.03;
 }
 
-.hero-carousel {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero-carousel img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 2rem;
+.hero-buttons button a {
+    text-decoration: none;
+    color: white;
 }
 
 @media (max-width: 1399px) {
@@ -98,10 +87,6 @@
     .hero .hero-description {
         font-size: 1rem;
     }
-
-    .hero .hero-buttons button {
-        font-size: 1rem;
-    }
 }
 
 @media (max-width: 991px) {
@@ -116,11 +101,6 @@
     }
 
     .hero .hero-description {
-        font-size: 0.9rem;
-        margin: 0;
-    }
-
-    .hero .hero-buttons button {
         font-size: 0.9rem;
         margin: 0;
     }
@@ -153,10 +133,5 @@
     .hero .hero-description {
         font-size: 0.9rem;
         font-weight: 500;
-    }
-
-    .hero .hero-buttons button {
-        font-size: 0.8rem;
-        margin-bottom: 0.5rem;
     }
 }
