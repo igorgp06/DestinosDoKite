@@ -80,6 +80,13 @@
 #map {
     height: 500px;
     width: 75%;
+    background-color: transparent;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
 }
 
 @media (max-width: 1399px) {
