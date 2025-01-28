@@ -69,6 +69,19 @@
     color: white;
 }
 
+.map-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: auto;
+}
+
+#map {
+    height: 500px;
+    width: 75%;
+}
+
 @media (max-width: 1399px) {
     .hero .page-subtitle {
         font-size: 1.9rem;
