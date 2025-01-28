@@ -54,19 +54,30 @@
     align-items: center;
 }
 
-.nav-menu li a {
+.navbar-list .nav-item .btn {
+    border: none;
+    background-color: transparent;
     color: var(--Blue-1);
     text-decoration: none;
     font-size: 1.2rem;
-    padding: 0.5rem 1rem;
+    padding: 0;
     border-radius: 3rem;
     background-color: var(--Blue-3);
     font-weight: 500;
     transition: all 0.4s ease-in-out;
 }
 
-.navbar-list li a:hover {
+.navbar-list .nav-item .btn:hover {
     background-color: var(--Blue-2);
+}
+
+.nav-item .nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.nav-item .btn.active {
+    background-color: var(--Blue-2);
+    transition: all 0.4s ease-in-out;
 }
 
 .close-icon {
@@ -110,6 +121,7 @@
     .nav-menu.active {
         right: 0;
         opacity: 1;
+        z-index: 10;
     }
 
     .close-icon {

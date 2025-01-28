@@ -22,9 +22,11 @@ O projeto segue o seguinte padrão de sufixos:
 
 Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão listados aqui com o seu ID, uma breve descrição, a versão em que foi encontrado e em qual versão foi solucionado.
 
-- [x] Bug 1: os elementos do header estão colados com a logo ao invés de permaneceram nos extremos opostos. Encontrado na versão 4.2, resolvido na versão 4.3.
+- [x] Bug 1: os elementos do header estão colados com a logo ao invés de permaneceram nos extremos opostos. Bug encontrado na versão 4.2, resolvido na versão 4.3.
 
-- [x] Bug 2: os itens de navegação do header deveriam sumir em telas pequenas e aparecer no menu, porém isso não acontece. Encontrado na versão 4.2, resolvido na versão 4.3.
+- [x] Bug 2: os itens de navegação do header deveriam sumir em telas pequenas e aparecer no menu, porém isso não acontece. Bug encontrado na versão 4.2, resolvido na versão 4.3.
+
+- [x] BUg 3: os cards na página `Quem Somos` estão sobrendo o menu quando ele está ativo. Bug encontrado 4.3, resolvido na versão 4.4.
 
 ## Licença
 
