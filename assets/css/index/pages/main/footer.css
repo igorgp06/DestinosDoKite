@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--Blue-2);
+    background-color: var(--Blue-1);
 }
 
 .hero-footer .hero-footer-text {

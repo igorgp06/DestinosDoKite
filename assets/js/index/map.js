@@ -57,17 +57,29 @@ map.on('click', onMapClick);
 */
 
 document.addEventListener('DOMContentLoaded', () => {
-    const mapInfo = document.querySelector('.map-info');
+    const openInfo = document.querySelector('.open-info');
+    const closeInfo = document.querySelector('.close-info');
     const instructionMenu = document.querySelector('.instruction-menu');
-    const closeMapInfo = document.querySelector('.close-map-info');
 
+    const openMenu = () => {
+        instructionMenu.classList.add('active');
+        openInfo.classList.add('active');
+        closeInfo.classList.add('active');
+    }
 
-    mapInfo.addEventListener('click', function (e) {
-        e.preventDefault();
-        instructionMenu.classList.toggle('active');
-    });
-
-    closeMapInfo.addEventListener('click', function () {
+    const closeMenu = () => {
         instructionMenu.classList.remove('active');
+        openInfo.classList.remove('active');
+        closeInfo.classList.remove('active');
+    }
+
+    openInfo.addEventListener('click', openMenu);
+    closeInfo.addEventListener('click', closeMenu);
+    
+    document.addEventListener('click', (e) => {
+        if (!e.target.closest('.map-info-buttons') && 
+            !e.target.closest('.instruction-menu')) {
+            closeMenu();
+        }
     });
 });

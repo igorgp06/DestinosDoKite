@@ -9,8 +9,8 @@
 
 :root {
     /* palheta de cores */
-    --Blue-1: rgb(242, 242, 242);
-    --Blue-2: rgb(191, 199, 217);
+    --Blue-1: #f2f2f2;
+    --Blue-2: #bfc7d9;
     --Blue-3: rgb(121, 127, 141);
     --Blue-4: rgb(108, 119, 140);
     --Blue-5: rgb(78, 88, 115);
