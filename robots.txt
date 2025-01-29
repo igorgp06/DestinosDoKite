@@ -1,0 +1,2 @@
+User-agent: *
+https://destinosdokite.com.br/index.html

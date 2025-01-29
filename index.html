@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinos do Kite - Início</title>
+    <meta name="description" 
+        content="Destinos do Kite - Início: Aqui voce vai encontrar os melhores spots de velejo e as escolas de kitesurf mais incríveis espalhadas pelo Brasil num único lugar!" > 
     <!-- TODO: Fazer o favicon -->
 
     <!-- CSS -->
@@ -103,10 +105,24 @@
                 </div>
                 <div class="col-12 col-md-12 col-lg-6 hero-map">
                     <div class="map-container">
-                        <div id="map"></div>
+                        <div id="map">
+                            <div class="map-info" id="map-info">
+                                <span title="Informações sobre o mapa"><i class="bi bi-question-lg"></i></span>
+                            </div>
+                            <div class="instruction-menu" id="instruction-menu">
+                                <h3>Informações sobre o mapa</h3>
+                                <p>1. Clique sobre algum marcador presente no mapa para acessar as informações das escolas de kitesurf presentes naquele estado.</p>
+                                <p>2. Use o zoom para aproximar ou afastar.</p>
+                                <p>3. Clique nos marcadores para mais informações.</p>
+                                <p>4. Clique no X para fechar este menu.</p>
+                                <span>Estados onde não foram lisadas nenhuma escola não possuem um marcador.</span>
+                                <button class="close-map-info">
+                                    <span><i class="bi bi-x-lg"></i></span>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
         </main>
     </section>
 

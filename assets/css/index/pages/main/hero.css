@@ -74,19 +74,119 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: auto;
 }
 
 #map {
     height: 500px;
-    width: 75%;
+    width: 80%;
     background-color: transparent;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    position: relative;
+}
 
+.map-info {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 5;
+}
+
+.map-info span {
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.map-info span i {
+    color: var(--Blue-1);
+    background-color: var(--Blue-4);
+    padding: 0.5rem;
+    border-radius: 9999rem;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.map-info span i:hover {
+    background-color: var(--Blue-3);
+}
+
+.instruction-menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: var(--Blue-4);
+    padding: 1rem;
+    z-index: 500;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.instruction-menu.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.instruction-menu h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--Blue-1);
+    font-family: var(--Destaque);
+    margin-top: 0;
+}
+
+.instruction-menu p {
+    color: var(--Blue-1);
+    font-size: 0.9rem;
+    font-weight: 545;
+    font-family: var(--Padrao);
+    margin: 5px 0;
+}
+
+.instruction-menu span {
+    color: rgba(242, 242, 242, 0.500);
+}
+
+.close-map-info {
+    color: var(--Blue-1);
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.close-map-info span i {
+    font-size: 1.4rem;
+    color: var(--Blue-1);
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.close-map-info:hover {
+    transform: rotate(90deg);
+    scale: 1.1;
+}
+
+.leaflet-popup-content-wrapper {
+    background-color: var(--Blue-4);
+    border: 2px solid var(--Blue-2);
+}
+
+/* Estilo do link dentro do popup */
+.leaflet-popup-content a {
+    color: var(--Blue-2);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.leaflet-popup-content a:hover {
+    color: var(--Blue-3);
+}
+
+/* Estilo da seta do popup */
+.leaflet-popup-tip {
+    background-color: var(--Blue-1);
+    border: 1px solid var(--Blue-2);
 }
 
 @media (max-width: 1399px) {

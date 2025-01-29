@@ -5,23 +5,12 @@ const map = L.map('map', {
         [-33.8688, -73.9828],
         [5.2718, -34.7297]
     ],
-    maxZoom: 8,
-    minZoom: 4
+    maxZoom: 9,
+    minZoom: 3
 });
 
-/* 
-
-por no tileLayer e nas atribuições a depender da decisão do cliente se prefero com ou sem
-
-https://tile.openstreetmap.org/{z}/{x}/{y}.png
-
-'&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="external">OpenStreetMap</a> 
-contributors and <a href="https://igorgp06.github.io/DestinosDoKite/">Destinos do Kite</a>'
-
-*/
-
 L.tileLayer('', {
-    attribution: '&copy; <a href="https://igorgp06.github.io/DestinosDoKite/">Destinos do Kite</a>',
+    attribution: '&copy; <a href="https://destinosdokite.com.br/index.html">Destinos do Kite</a>',
 }).addTo(map);
 
 fetch('../../assets/static/geojson/brazil-states.geojson')
@@ -39,14 +28,12 @@ fetch('../../assets/static/geojson/brazil-states.geojson')
         }).addTo(map);
     });
 
-// Marcadores de teste
+// Marcador de teste
 L.marker([-27.89037, -49.119873]).addTo(map)
     .bindPopup('<a href="../../assets/html/pages/states.html">Clique para ver as escolas de <br>kitesurf presentes em Santa Catarina</br></a>');
 
-L.marker([-24.57991, -51.800537]).addTo(map)
-    .bindPopup('<a href="../../assets/html/pages/states.html">Clique para ver as escolas de <br>kitesurf presentes no Paraná</br></a>');
 
-/* 
+/*
 
 função para pegar as coordenadas do click
 
@@ -58,4 +45,36 @@ map.on('click', onMapClick);
 
 */
 
+document.addEventListener('DOMContentLoaded', () => {
+    const mapInfo = document.querySelector('.map-info');
+    const instructionMenu = document.querySelector('.instruction-menu');
+    const closeMapInfo = document.querySelector('.close-map-info');
 
+    mapInfo.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (instructionMenu.style.display === 'block') {
+            instructionMenu.style.display = 'none';
+        } else {
+            instructionMenu.style.display = 'block';
+        }
+    });
+
+    closeMapInfo.addEventListener('click', function () {
+        instructionMenu.style.display = 'none';
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mapInfo = document.querySelector('.map-info');
+    const instructionMenu = document.querySelector('.instruction-menu');
+    const closeMapInfo = document.querySelector('.close-map-info');
+
+    mapInfo.addEventListener('click', function (e) {
+        e.preventDefault();
+        instructionMenu.classList.toggle('active');
+    });
+
+    closeMapInfo.addEventListener('click', function () {
+        instructionMenu.classList.remove('active');
+    });
+});
