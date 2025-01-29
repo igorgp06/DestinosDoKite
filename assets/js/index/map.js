@@ -41,7 +41,7 @@ const kiteIcon = L.icon({
 
 // Marcador de teste
 L.marker([-27.481776, -49.448089], {icon: kiteIcon}).addTo(map)
-    .bindPopup('<a href="../../assets/html/pages/states.html">Clique para ver as escolas de <br>kitesurf presentes em Santa Catarina</br></a>');
+    .bindPopup('<a href="../../assets/html/pages/states.html">Clique para ver as escolas de kitesurf presentes em Santa Catarina</a>');
 
 
 /* 
