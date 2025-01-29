@@ -28,12 +28,23 @@ fetch('../../assets/static/geojson/brazil-states.geojson')
         }).addTo(map);
     });
 
+const kiteIcon = L.icon({
+    iconUrl: '../../assets/static/images/index/hero/kitesurf.png',
+    shadowUrl: '',
+
+    iconSize: [20, 20],
+    shadowSize: [0, 0],
+    iconAnchor: [12.5, 12.5],
+    shadowAnchor: [0, 0],
+    popupAnchor: [-10, -8],
+})
+
 // Marcador de teste
-L.marker([-27.89037, -49.119873]).addTo(map)
+L.marker([-27.481776, -49.448089], {icon: kiteIcon}).addTo(map)
     .bindPopup('<a href="../../assets/html/pages/states.html">Clique para ver as escolas de <br>kitesurf presentes em Santa Catarina</br></a>');
 
 
-/*
+/* 
 
 função para pegar as coordenadas do click
 
@@ -50,24 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const instructionMenu = document.querySelector('.instruction-menu');
     const closeMapInfo = document.querySelector('.close-map-info');
 
-    mapInfo.addEventListener('click', function (e) {
-        e.preventDefault();
-        if (instructionMenu.style.display === 'block') {
-            instructionMenu.style.display = 'none';
-        } else {
-            instructionMenu.style.display = 'block';
-        }
-    });
-
-    closeMapInfo.addEventListener('click', function () {
-        instructionMenu.style.display = 'none';
-    });
-});
-
-document.addEventListener('DOMContentLoaded', () => {
-    const mapInfo = document.querySelector('.map-info');
-    const instructionMenu = document.querySelector('.instruction-menu');
-    const closeMapInfo = document.querySelector('.close-map-info');
 
     mapInfo.addEventListener('click', function (e) {
         e.preventDefault();

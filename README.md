@@ -28,6 +28,8 @@ Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão list
 
 - [x] BUg 3: os cards na página `Quem Somos` estão sobrendo o menu quando ele está ativo. Bug encontrado 4.3, resolvido na versão 4.4.
 
+- [x] Bug 4: o título do menu deveria aparecer em telas menores que 1200px porém isso não acontece. Bug encontrado na versão 4.7, resolvido na versão 4.8.
+
 ## Licença
 
 Este código está sob uma licença personalizada que permite apenas a **visualização** do código.  
