@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 0;
     height: auto;
-    min-height: 90vh;
+    min-height: 93vh;
     background-color: var(--Blue-1);
     display: flex;
     align-items: center;
@@ -95,5 +95,64 @@
 
 .states-card-group .states-card-btn:hover {
     background-color: var(--Blue-2);
+    color: black;
+}
+
+.container-select {
+    background-color: var(--Blue-2);
+    border-radius: 0.5rem;
+    padding: 2rem;
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.container-select .form-select {
+    padding: 0.7rem;
+    margin: auto;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    background-color: var(--Blue-1);
+    width: 75%; 
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.container-select .form-select:focus {
+    border-color: var(--Blue-5);
+    outline: 0;
+    box-shadow: 0 0 0 .25rem rgba(10, 10, 10, 0.25);
+}
+
+.container-select .form-select option {
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: var(--Padrao);
+    background-color: var(--Blue-1);
+}
+
+.select-states-btn {
+    padding: 0.5rem 1rem;
+    margin: 1rem auto;
+    border-radius: 0.5rem;
+    font-weight: 500;
+    color: var(--Blue-1);
+    background-color: var(--Blue-4);
+    text-decoration: none;
+    text-align: bottom;
+    align-items: bottom;
+    justify-content: bottom;
+    transition: all 0.4s ease-in-out;
+}
+
+.select-states-btn:hover {
+    background-color: var(--Blue-1);
     color: black;
 }
