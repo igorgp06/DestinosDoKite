@@ -2,43 +2,43 @@
 
 /* footer */
 
-.hero-footer {
+.states-footer {
     min-height: 5vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--Blue-1);
+    background-color: var(--Blue-2);
 }
 
-.hero-footer .hero-footer-text {
+.states-footer .states-footer-text {
     margin: 1rem;
     padding: 0;
 }
 
-.hero-footer .hero-footer-text li {
+.states-footer .states-footer-text li {
     font-size: 0.9rem;
     font-weight: 500;
     color: rgba(0, 0, 0, 0.550);
 }
 
-.hero-footer .hero-footer-text li a {
+.states-footer .states-footer-text li a {
     color: rgba(0, 0, 0, 0.550);
     text-decoration: none;
     transition: all 0.4s ease-in-out;
 }
 
-.hero-footer .footer-creator:hover {
+.states-footer .footer-creator:hover {
     color: var(--Blue-1);
     transform: scale(1.1);
     transition: all 0.4s ease-in-out;
 } 
 
 @media (max-width: 575px) {
-    .hero-footer {
+    .states-footer {
         min-height: 4vh;
     }
 
-    .hero-footer .hero-footer-text {
+    .states-footer .states-footer-text {
         margin: 0.6rem;
     }
 }

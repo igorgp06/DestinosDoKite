@@ -1,0 +1,7 @@
+@charset "UTF-8";
+
+/* imports das paginas */
+
+@import url('hero.css');
+@import url('states.css');
+@import url('footer.css');

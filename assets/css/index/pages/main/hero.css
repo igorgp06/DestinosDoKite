@@ -2,7 +2,7 @@
 
 /* hero */
 
-.hero {
+.index-hero {
     margin: 0 auto;
     padding: 0;
     height: auto;
@@ -20,12 +20,8 @@
     background-repeat: no-repeat;
 }
 
-.hero .page-title .destaque {
+.index-hero .page-title .destaque {
     text-decoration: underline;
-}
-
-.hero .page-subtitle {
-    color: var(--Blue-4);
 }
 
 .hero-text {
@@ -87,7 +83,7 @@
     position: relative;
 }
 #map svg {
-    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.600));
+    filter: drop-shadow(0 2px 8px rgba(242, 242, 242, 0.75));
 }
 
 .map-info-buttons {
@@ -193,7 +189,7 @@
 }
 
 .leaflet-control-attribution {
-    background-color: rgba(242, 242, 242, 0.750) !important;
+    background-color: rgba(242, 242, 242, 0.150) !important;
 }
 
 .leaflet-popup-tip {
@@ -202,11 +198,12 @@
 }
 
 @media (max-width: 1399px) {
-    .hero {
+    .index-hero {
         height: 100vh;
+        background-image: none;
     }
 
-    .hero .page-subtitle {
+    .index-hero .page-subtitle {
         font-size: 1.9rem;
     }
 
@@ -216,37 +213,37 @@
 }
 
 @media (max-width: 1199px) {
-    .hero .page-title {
+    .index-hero .page-title {
         font-size: 3rem;
     }
 
-    .hero .page-subtitle {
+    .index-hero .page-subtitle {
         font-size: 1.6rem;
     }
 
-    .hero .hero-description {
+    .hero-description {
         font-size: 1rem;
     }
 }
 
 @media (max-width: 991px) {
-    .hero .page-title {
+    .index-hero .page-title {
         font-size: 2.5rem;
         margin-top: 1rem;
     }
 
-    .hero .page-subtitle {
-        font-size: 1.3rem;
-        margin: 0.5rem;
-    }
-
-    .hero .hero-description {
-        font-size: 0.9rem;
+    .hero-description {
+        font-size: 1.1rem;
         margin: 0;
     }
 
-    .hero .hero-buttons {
-        margin: 0.5rem 0;
+    .hero-buttons {
+        margin: 1rem 0 2rem 0;
+    }
+
+    .hero-buttons button {
+        padding: 0.5rem;
+        font-size: 0.9rem;
     }
 
     .hero-map {
@@ -274,7 +271,7 @@
 }
 
 @media (max-width: 768px) {
-    .hero .page-title {
+    .index-hero .page-title {
         font-size: 2.5rem;
         margin: 2.2rem 0 1rem 0;
     }
@@ -298,7 +295,7 @@
 }
 
 @media (max-width: 767px) {
-    .hero .page-title {
+    .index-hero .page-title {
         font-size: 2.2rem;
         margin-top: 0.5rem;
     }
@@ -352,17 +349,12 @@
 }
 
 @media (max-width: 474px) {
-    .hero .page-title {
+    .index-hero .page-title {
         font-size: 2rem;
         margin-top: 0.5rem;
     }
 
-    .hero .page-subtitle {
-        font-size: 1.1rem;
-        margin: 0.5rem;
-    }
-
-    .hero .hero-description {
+    .index-hero .hero-description {
         font-size: 0.9rem;
         font-weight: 500;
     }

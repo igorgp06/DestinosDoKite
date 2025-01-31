@@ -2,10 +2,6 @@
 
 /* footer */
 
-@charset "UTF-8";
-
-/* footer */
-
 .about-us-footer {
     min-height: 5vh;
     display: flex;
@@ -44,9 +40,5 @@
 
     .about-us-footer .about-us-footer-text {
         margin: 0.6rem;
-    }
-
-    .hero-description .about-us-footer-text li {
-        font-size: 0.5rem;
     }
 }

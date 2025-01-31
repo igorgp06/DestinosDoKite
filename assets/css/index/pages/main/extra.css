@@ -20,9 +20,15 @@
     background-repeat: no-repeat;
 }
 
+.carrousel-container {
+    width: 75%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
 .extra .page-subtitle {
     color: var(--Blue-4);
-    font-weight: 700;
 }
 
 .extra-description {
@@ -49,10 +55,6 @@
     .extra .page-subtitle {
         margin: 3rem 0 1rem 0;
     }
-
-    .carousel {
-        display: none;
-    }
 }
 
 @media (max-width: 767px) {
@@ -65,3 +67,9 @@
     }
 }
 
+@media (max-width: 474px) {
+    .extra .page-subtitle {
+        font-size: 1.1rem;
+        margin: 0.5rem;
+    }
+}

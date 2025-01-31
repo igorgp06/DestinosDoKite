@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+/* hero */
+
+.states-hero {
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    min-height: 90vh;
+    background-color: var(--Blue-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.states-hero .page-title {
+    margin: 0 0 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
+    justify-content: top;
+    text-align: top;
+    position: absolute;
+    top: 150px;
+    right: 0px;
+    left: 0px;
+}
+
+.states-hero .page-subtitle {
+    color: var(--Blue-3);
+}
+
+.states-hero-text {
+    margin: 0 0 2rem 0;
+    color: black;
+    font-size: 1.2rem;
+    font-family: var(--Padrao);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.states-card-group {
+    gap: 0.5rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.states-card-group .card {
+    flex: 1 1 calc(45% - 1rem);
+    max-width: 300px;
+    height: 250px;
+    max-height: 400px;
+    background-color: var(--Blue-2);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.states-card-group .card:hover {
+    transform: scale(1.01);
+    box-shadow: 1px 1px 0 var(--Blue-5);
+    background-color: var(--Blue-1);
+    border-radius: 1rem;
+}
+
+.states-card-group .card-title {
+    font-size: 1.2rem;
+    font-weight: 650;
+    font-family: var(--Destaque);
+}
+
+.states-card-group .states-card-btn {
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-weight: 500;
+    color: var(--Blue-1);
+    background-color: var(--Blue-4);
+    text-decoration: none;
+    text-align: bottom;
+    align-items: bottom;
+    justify-content: bottom;
+    transition: all 0.4s ease-in-out;
+}
+
+.states-card-group .states-card-btn:hover {
+    background-color: var(--Blue-2);
+    color: black;
+}
