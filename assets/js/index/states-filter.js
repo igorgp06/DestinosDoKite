@@ -2,17 +2,26 @@ let stateMap = null;
 let currentStateLayer = null;
 
 const stateOrder = [
-    "Acre", "Alagoas", "Amapá", "Amazonas", 
-    "Bahia", "Ceará", "Distrito Federal", 
-    "Espírito Santo", "Goiás", "Maranhão", 
-    "Mato Grosso", "Mato Grosso do Sul", 
-    "Minas Gerais", "Pará", "Paraíba", 
-    "Paraná", "Pernambuco", "Piauí", 
-    "Rio de Janeiro", "Rio Grande do Sul", 
-    "Rio Grande do Norte", "Rondônia", 
-    "Roraima", "Santa Catarina", "São Paulo", 
+    "Acre", "Alagoas", "Amapá", "Amazonas",
+    "Bahia", "Ceará", "Distrito Federal",
+    "Espírito Santo", "Goiás", "Maranhão",
+    "Mato Grosso", "Mato Grosso do Sul",
+    "Minas Gerais", "Pará", "Paraíba",
+    "Paraná", "Pernambuco", "Piauí",
+    "Rio de Janeiro", "Rio Grande do Sul",
+    "Rio Grande do Norte", "Rondônia",
+    "Roraima", "Santa Catarina", "São Paulo",
     "Sergipe", "Tocantins"
 ];
+
+const stateCodesToIBGE = {
+    1: "AC", 2: "AL", 3: "AP", 4: "AM", 5: "BA",
+    6: "CE", 7: "DF", 8: "ES", 9: "GO", 10: "MA",
+    11: "MT", 12: "MS", 13: "MG", 14: "PA", 15: "PB",
+    16: "PR", 17: "PE", 18: "PI", 19: "RJ", 20: "RS",
+    21: "RN", 22: "RO", 23: "RR", 24: "SC", 25: "SP",
+    26: "SE", 27: "TO"
+};
 
 const stateNames = {
     1: "Acre",
@@ -46,25 +55,17 @@ const stateNames = {
 
 async function loadStateData(stateCode) {
     try {
-        const response = await fetch('../../assets/static/geojson/brazil-states.geojson');
+        const ibgeCode = stateCodesToIBGE[stateCode];
+        const response = await fetch(`https://servicodados.ibge.gov.br/api/v4/malhas/estados/${ibgeCode}?formato=application/json`);
         const data = await response.json();
-        
-        const stateIndex = parseInt(stateCode) - 1;
-        
-        if (!data.features[stateIndex]) {
-            console.error("Estado não encontrado");
-            return;
-        }
 
-        const stateFeature = data.features[stateIndex];
-        
         document.getElementById('state-name').textContent = stateNames[stateCode];
-        
+
         if (currentStateLayer) {
             stateMap.removeLayer(currentStateLayer);
         }
-        
-        currentStateLayer = L.geoJSON(stateFeature, {
+
+        currentStateLayer = L.geoJSON(data, {
             style: {
                 color: "#4e5873",
                 weight: 2,
@@ -72,9 +73,9 @@ async function loadStateData(stateCode) {
                 fillOpacity: 0.5
             }
         }).addTo(stateMap);
-        
+
         stateMap.fitBounds(currentStateLayer.getBounds());
-        
+
         const schools = getSchoolsByState(stateCode);
         displaySchools(schools);
 
@@ -86,7 +87,7 @@ async function loadStateData(stateCode) {
 function displaySchools(schools) {
     const container = document.getElementById('schools-container');
     container.innerHTML = '';
-    
+
     schools.forEach(school => {
         const html = `
             <div class="col-12">
@@ -103,48 +104,60 @@ function displaySchools(schools) {
 }
 
 function getSchoolsByState(stateCode) {
-    return [{
-        name: "Escola Teste",
-        location: "Localização Teste",
-        season: "Ano Todo",
-        link: "#"
-    }];
+    const schools = [
+        {
+            name: "Escola Teste 1",
+            location: "Localização Teste 1",
+            season: "Ano Todo",
+            link: "#",
+            state: "5"
+        }
+    ];
+
+    return schools.filter(school => school.state === stateCode);
 }
 
 function initStateMap() {
     stateMap = L.map('state-map', {
         zoomControl: false,
-        attributionControl: false
-    }).setView([-15.084058, -53.481445], 4);
+        attributionControl: false,
+        center: [-15.084058, -53.481445],
+        zoom: 2,
+        maxBounds: [
+            [-33.8688, -73.9828],
+            [5.2718, -34.7297]
+        ],
+        maxZoom: 9,
+        minZoom: 3
+    });
 
-    fetch('../../assets/static/geojson/brazil-states.geojson')
-    .then((response) => response.json())
-    .then((data) => {
-        L.geoJSON(data, {
-            style: function () {
-                return {
+    L.tileLayer('#', {
+        attribution: '&copy; <a href="https://destinosdokite.com.br/index.html">Destinos do Kite</a>'
+    }).addTo(stateMap);
+
+    fetch('../../static/geojson/brazil-states.geojson')
+        .then(response => response.json())
+        .then(data => {
+            L.geoJSON(data, {
+                style: {
                     color: "#4e5873",
                     weight: 2,
                     fillColor: "#797f8d",
                     fillOpacity: 0.3
-                };
-            },
-        }).addTo(stateMap);
-    });
-    
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(stateMap);
+                }
+            }).addTo(stateMap);
+        });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     initStateMap();
-    
+
     document.querySelector('.select-states-btn').addEventListener('click', (e) => {
         e.preventDefault();
         const stateSelect = document.querySelector('.state-container');
         const stateCode = stateSelect.value;
-        
+        console.log("Código do estado selecionado:", stateCode);
+
         if (stateCode && stateCode !== 'Selecione um estado') {
             loadStateData(stateCode);
         }
