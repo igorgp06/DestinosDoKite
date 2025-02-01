@@ -21,16 +21,7 @@
 }
 
 .states-hero .page-title {
-    margin: 0 0 2rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: top;
-    justify-content: top;
-    text-align: top;
-    position: absolute;
-    top: 150px;
-    right: 0px;
-    left: 0px;
+    font-weight: 700;
 }
 
 .states-hero .page-subtitle {
@@ -38,7 +29,7 @@
 }
 
 .states-hero-text {
-    margin: 0 0 2rem 0;
+    margin: 2rem;
     color: black;
     font-size: 1.2rem;
     font-family: var(--Padrao);
@@ -60,7 +51,7 @@
     background-color: var(--Blue-1);
     border-radius: 0.5rem;
     padding: 2rem;
-    margin: 1rem 0;
+    margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,7 +114,7 @@
 
 .states-card-group {
     gap: 0.5rem;
-    margin-top: 2rem;
+    margin: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -172,4 +163,94 @@
 .states-card-group .states-card-btn:hover {
     background-color: var(--Blue-2);
     color: black;
+}
+
+@media (max-width: 1240px) {
+    .states-hero .page-subtitle {
+        font-size: 1.5rem;
+    }
+
+    .states-hero-text {
+        margin: 1rem;
+        font-size: 1.2rem;
+    }
+    
+    .container-select {
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+
+    .states-card-group .card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+
+    .states-card-group .card-title {
+        font-size: 1.1rem;
+    }
+
+    .states-card-group .states-card-btn {
+        font-size: 0.9rem;
+    }
+
+    .states-select-description {
+        font-size: 1rem;
+    }
+
+    .select-states-btn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 991px) {
+    .states-hero {
+        min-height: 95vh;
+    }
+
+    .states-hero .page-title {
+        margin-top: 1rem;
+    }
+
+    .states-hero .page-subtitle {
+        font-size: 1.3rem;
+    }
+
+    .states-hero-text {
+        margin: 1rem;
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .states-hero-text {
+        margin: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .container-select {
+        padding: 1.5rem;
+        margin: 0.5rem;
+    }
+    
+    .states-card-group .card {
+        max-width: 400px;
+        height: 300px;
+        max-height: 400px;
+    }
+
+    .states-card-group .card-title {
+        font-size: 1.2rem;
+    }
+
+    .states-card-group .states-card-btn {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 562px) {
+    .states-card-group .card {
+        flex: 1 1 calc(100% - 1rem);
+        height: 250px;
+        max-width: 300px;
+        max-height: 300px;
+    }
 }
