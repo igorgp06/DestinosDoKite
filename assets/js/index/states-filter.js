@@ -1,19 +1,6 @@
 let stateMap = null;
 let currentStateLayer = null;
 
-const stateOrder = [
-    "Acre", "Alagoas", "Amapá", "Amazonas",
-    "Bahia", "Ceará", "Distrito Federal",
-    "Espírito Santo", "Goiás", "Maranhão",
-    "Mato Grosso", "Mato Grosso do Sul",
-    "Minas Gerais", "Pará", "Paraíba",
-    "Paraná", "Pernambuco", "Piauí",
-    "Rio de Janeiro", "Rio Grande do Sul",
-    "Rio Grande do Norte", "Rondônia",
-    "Roraima", "Santa Catarina", "São Paulo",
-    "Sergipe", "Tocantins"
-];
-
 const stateCodesToIBGE = {
     1: "AC", 2: "AL", 3: "AP", 4: "AM", 5: "BA",
     6: "CE", 7: "DF", 8: "ES", 9: "GO", 10: "MA",
@@ -24,33 +11,16 @@ const stateCodesToIBGE = {
 };
 
 const stateNames = {
-    1: "Acre",
-    2: "Alagoas",
-    3: "Amapá",
-    4: "Amazonas",
-    5: "Bahia",
-    6: "Ceará",
-    7: "Distrito Federal",
-    8: "Espírito Santo",
-    9: "Goiás",
-    10: "Maranhão",
-    11: "Mato Grosso",
-    12: "Mato Grosso do Sul",
-    13: "Minas Gerais",
-    14: "Pará",
-    15: "Paraíba",
-    16: "Paraná",
-    17: "Pernambuco",
-    18: "Piauí",
-    19: "Rio de Janeiro",
-    20: "Rio Grande do Sul",
-    21: "Rio Grande do Norte",
-    22: "Rondônia",
-    23: "Roraima",
-    24: "Santa Catarina",
-    25: "São Paulo",
-    26: "Sergipe",
-    27: "Tocantins"
+    1: "Acre", 2: "Alagoas", 3: "Amapá", 4: "Amazonas",
+    5: "Bahia", 6: "Ceará", 7: "Distrito Federal",
+    8: "Espírito Santo", 9: "Goiás", 10: "Maranhão",
+    11: "Mato Grosso", 12: "Mato Grosso do Sul",
+    13: "Minas Gerais", 14: "Pará", 15: "Paraíba",
+    16: "Paraná", 17: "Pernambuco", 18: "Piauí",
+    19: "Rio de Janeiro", 20: "Rio Grande do Sul",
+    21: "Rio Grande do Norte", 22: "Rondônia",
+    23: "Roraima", 24: "Santa Catarina", 25: "São Paulo",
+    26: "Sergipe", 27: "Tocantins"
 };
 
 function showMap() {
@@ -58,19 +28,24 @@ function showMap() {
     mapElement.classList.remove('hidden');
 }
 
+function isValidGeoJSON(data) {
+    return data && typeof data === 'object' && data.type === 'FeatureCollection';
+}
+
 async function loadStateData(stateCode) {
     try {
-        const ibgeCode = stateCodesToIBGE[stateCode];
-        const response = await fetch(`https://servicodados.ibge.gov.br/api/v4/malhas/estados/${ibgeCode}?formato=application/json`);
-        
+        const ibgeCode = stateCodesToIBGE[stateCode].toLowerCase();
+        const response = await fetch(`../../static/JSON/states-JSON/${ibgeCode}.json`);
+
         if (!response.ok) {
-            throw new Error(`Erro na requisição: ${response.status} ${response.statusText}`);
+            throw new Error(`Erro ao carregar GeoJSON do estado: ${response.status} ${response.statusText}`);
         }
 
-        const rawData = await response.json();
-        console.log("Resposta da API:", rawData);
+        const data = await response.json();
 
-        const data = convertToValidGeoJSON(rawData);
+        if (!isValidGeoJSON(data)) {
+            throw new Error("Dados GeoJSON inválidos.");
+        }
 
         showMap();
         document.getElementById('state-name').textContent = stateNames[stateCode];
@@ -101,29 +76,9 @@ async function loadStateData(stateCode) {
     }
 }
 
-function isValidGeoJSON(data) {
-    return data && typeof data === 'object' && data.type === 'FeatureCollection';
-}
-
-function convertToValidGeoJSON(topology) {
-    if (!topology || topology.type !== "Topology") {
-        throw new Error("Resposta da API não está no formato Topology.");
-    }
-
-    const key = Object.keys(topology.objects)[0];
-    const geojsonData = topojson.feature(topology, topology.objects[key]);
-
-    if (!isValidGeoJSON(geojsonData)) {
-        throw new Error("Falha ao converter Topology para GeoJSON.");
-    }
-
-    return geojsonData;
-}
-
 function displaySchools(schools) {
     const container = document.getElementById('schools-container');
     container.innerHTML = '';
-
     schools.forEach(school => {
         const html = `
             <div class="school-card">
@@ -134,7 +89,6 @@ function displaySchools(schools) {
             </div>
         `;
         container.insertAdjacentHTML('beforeend', html);
-
         const marker = L.marker([school.lat, school.lng]).addTo(stateMap);
         marker.bindPopup(`<b>${school.name}</b><br>${school.location}`);
     });
@@ -147,10 +101,11 @@ function getSchoolsByState(stateCode) {
             location: "Localização Teste 1",
             season: "Ano Todo",
             link: "#",
-            state: "5"
+            lat: -27.59,
+            lng: -48.55,
+            state: "24"
         }
     ];
-
     return schools.filter(school => school.state === stateCode);
 }
 
@@ -170,32 +125,20 @@ function initStateMap() {
     L.tileLayer('#', {
         attribution: '&copy; <a href="https://destinosdokite.com.br/index.html">Destinos do Kite</a>'
     }).addTo(stateMap);
+}
 
-    fetch('../../static/geojson/brazil-states.geojson')
-        .then(response => response.json())
-        .then(data => {
-            L.geoJSON(data, {
-                style: {
-                    color: "#4e5873",
-                    weight: 2,
-                    fillColor: "#797f8d",
-                    fillOpacity: 0.3
-                }
-            }).addTo(stateMap);
-        });
+function userStateChoice() {
+    const statesForm = document.querySelector('.state-container');
+    const stateCode = statesForm.value;
+
+    if (stateCode && stateCode !== '') {
+        loadStateData(stateCode);
+    } else {
+        console.warn("Nenhum estado selecionado.");
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     initStateMap();
-
-    document.querySelector('.select-states-btn').addEventListener('click', (e) => {
-        e.preventDefault();
-        const stateSelect = document.querySelector('.state-container');
-        const stateCode = stateSelect.value;
-        console.log("Código do estado selecionado:", stateCode);
-
-        if (stateCode && stateCode !== 'Selecione um estado') {
-            loadStateData(stateCode);
-        }
-    });
+    document.querySelector('.select-states-btn').addEventListener('click', userStateChoice);
 });

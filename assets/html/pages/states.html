@@ -23,9 +23,6 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 
-    <!-- topojson -->
-    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3"></script>
-
     <!-- escondendo o scroll do eixo X -->
     <style>
         body {
@@ -102,7 +99,7 @@
                             Escolha um estado e/ou uma época do ano para filtrar todas as escolas de kitesurf
                             de acordo com as suas preferências.
                         </p>
-                        <select class="form-select m-3 state-container" aria-label="Default select example" name="states-form">
+                        <select class="form-select m-3 state-container" id="states-form" aria-label="Default select example" name="states-form">
                             <option selected>Selecione um estado</option>
                             <option value="1" name="AC">Acre</option>
                             <option value="2" name="AL">Alagoas</option>
@@ -132,7 +129,8 @@
                             <option value="26" name="SE">Sergipe</option>
                             <option value="27" name="TO">Tocantins</option>
                         </select>
-                        <a href="#states-result" class="select-states-btn">Buscar</a>
+                        <button type="button" class="select-states-btn">Buscar</button>
+                        <!-- <a href="#states-result" class="select-states-btn" onclick="userStateChoice()">Buscar</a> -->
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-12">
