@@ -17,7 +17,7 @@ fetch('../../assets/static/geojson/brazil-states.geojson')
     .then((response) => response.json())
     .then((data) => {
         L.geoJSON(data, {
-            style: function (feature) {
+            style: function () {
                 return {
                     color: "#4e5873",
                     weight: 2,
