@@ -36,3 +36,7 @@
     background-color: var(--Blue-2);
     border-radius: 8px;
 }
+
+.forget-place {
+    display: none;
+}

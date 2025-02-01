@@ -53,12 +53,26 @@ const stateNames = {
     27: "Tocantins"
 };
 
+function showMap() {
+    const mapElement = document.getElementById('state-map');
+    mapElement.classList.remove('hidden');
+}
+
 async function loadStateData(stateCode) {
     try {
         const ibgeCode = stateCodesToIBGE[stateCode];
         const response = await fetch(`https://servicodados.ibge.gov.br/api/v4/malhas/estados/${ibgeCode}?formato=application/json`);
-        const data = await response.json();
+        
+        if (!response.ok) {
+            throw new Error(`Erro na requisição: ${response.status} ${response.statusText}`);
+        }
 
+        const rawData = await response.json();
+        console.log("Resposta da API:", rawData);
+
+        const data = convertToValidGeoJSON(rawData);
+
+        showMap();
         document.getElementById('state-name').textContent = stateNames[stateCode];
 
         if (currentStateLayer) {
@@ -74,14 +88,36 @@ async function loadStateData(stateCode) {
             }
         }).addTo(stateMap);
 
-        stateMap.fitBounds(currentStateLayer.getBounds());
+        if (currentStateLayer.getBounds().isValid()) {
+            stateMap.fitBounds(currentStateLayer.getBounds());
+        } else {
+            console.warn("Bounds inválidos para o estado selecionado.");
+        }
 
         const schools = getSchoolsByState(stateCode);
         displaySchools(schools);
-
     } catch (error) {
         console.error('Erro ao carregar dados:', error);
     }
+}
+
+function isValidGeoJSON(data) {
+    return data && typeof data === 'object' && data.type === 'FeatureCollection';
+}
+
+function convertToValidGeoJSON(topology) {
+    if (!topology || topology.type !== "Topology") {
+        throw new Error("Resposta da API não está no formato Topology.");
+    }
+
+    const key = Object.keys(topology.objects)[0];
+    const geojsonData = topojson.feature(topology, topology.objects[key]);
+
+    if (!isValidGeoJSON(geojsonData)) {
+        throw new Error("Falha ao converter Topology para GeoJSON.");
+    }
+
+    return geojsonData;
 }
 
 function displaySchools(schools) {
@@ -90,16 +126,17 @@ function displaySchools(schools) {
 
     schools.forEach(school => {
         const html = `
-            <div class="col-12">
-                <div class="school-card">
-                    <h5>${school.name}</h5>
-                    <p>${school.location}</p>
-                    <p>Temporada: ${school.season}</p>
-                    <a href="${school.link}" class="btn btn-primary">Ver Detalhes</a>
-                </div>
+            <div class="school-card">
+                <h5>${school.name}</h5>
+                <p>${school.location}</p>
+                <p>Temporada: ${school.season}</p>
+                <a href="${school.link}" class="btn btn-primary">Ver Detalhes</a>
             </div>
         `;
         container.insertAdjacentHTML('beforeend', html);
+
+        const marker = L.marker([school.lat, school.lng]).addTo(stateMap);
+        marker.bindPopup(`<b>${school.name}</b><br>${school.location}`);
     });
 }
 
@@ -120,7 +157,6 @@ function getSchoolsByState(stateCode) {
 function initStateMap() {
     stateMap = L.map('state-map', {
         zoomControl: false,
-        attributionControl: false,
         center: [-15.084058, -53.481445],
         zoom: 2,
         maxBounds: [
