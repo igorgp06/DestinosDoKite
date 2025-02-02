@@ -29,7 +29,7 @@ fetch('../../assets/static/JSON/geojson/brazil-states.geojson')
     });
 
 const kiteIcon = L.icon({
-    iconUrl: '../../assets/static/images/index/hero/kitesurf.png',
+    iconUrl: '../../assets/static/images/global/kitesurf.png',
     shadowUrl: '',
 
     iconSize: [20, 20],

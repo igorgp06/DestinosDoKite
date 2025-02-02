@@ -23,6 +23,27 @@ const stateNames = {
     26: "Sergipe", 27: "Tocantins"
 };
 
+const datedSchools = [
+    {
+        name: "Escola Teste 1",
+        location: "Imbituba",
+        season: "Ano Todo",
+        link: "#",
+        lat: -27.59,
+        lng: -48.55,
+        state: "24"
+    },
+    {
+        name: "Escola Teste 2",
+        location: "Favela da Rocinha",
+        season: "Ano Todo",
+        link: "#",
+        lat: -22.92,
+        lng: -43.17,
+        state: "19"
+    }
+];
+
 function showMap() {
     const mapElement = document.getElementById('state-map');
     mapElement.classList.remove('hidden');
@@ -78,7 +99,16 @@ async function loadStateData(stateCode) {
 
 function displaySchools(schools) {
     const container = document.getElementById('schools-container');
-    container.innerHTML = '';
+    container.innerHTML = ''; 
+
+    if (stateMap) {
+        stateMap.eachLayer(layer => {
+            if (layer instanceof L.Marker) {
+                stateMap.removeLayer(layer);
+            }
+        });
+    }
+
     schools.forEach(school => {
         const html = `
             <div class="school-card">
@@ -89,24 +119,25 @@ function displaySchools(schools) {
             </div>
         `;
         container.insertAdjacentHTML('beforeend', html);
-        const marker = L.marker([school.lat, school.lng]).addTo(stateMap);
+
+        const kiteMarker = L.icon({
+            iconUrl: '../../static/images/global/kitesurf.png',
+            shadowUrl: '',
+
+            iconSize: [17, 17],
+            shadowSize: [0, 0],
+            iconAnchor: [12.5, 12.5],
+            shadowAnchor: [0, 0],
+            popupAnchor: [-10, -8],
+        })
+
+        const marker = L.marker([school.lat, school.lng], {icon: kiteMarker}).addTo(stateMap);
         marker.bindPopup(`<b>${school.name}</b><br>${school.location}`);
     });
 }
 
 function getSchoolsByState(stateCode) {
-    const schools = [
-        {
-            name: "Escola Teste 1",
-            location: "Localização Teste 1",
-            season: "Ano Todo",
-            link: "#",
-            lat: -27.59,
-            lng: -48.55,
-            state: "24"
-        }
-    ];
-    return schools.filter(school => school.state === stateCode);
+    return datedSchools.filter(school => school.state === stateCode);
 }
 
 function initStateMap() {
@@ -131,27 +162,28 @@ function userStateChoice() {
     const statesForm = document.querySelector('.state-container');
     const stateCode = statesForm.value;
 
-    if (stateCode && stateCode !== '') {
-        const statesResultText = document.querySelector('.states-result-text');
-        statesResultText.classList.add('disabled');
-
-        const statesMap = document.querySelector('.states-map');
-        const schoolsList = document.querySelector('.schools-list');
-        statesMap.classList.remove('disabled');
-        statesMap.classList.add('activated');
-        schoolsList.classList.remove('disabled');
-        schoolsList.classList.add('activated');
-
-        loadStateData(stateCode).then(() => {
-            if (stateMap) {
-                setTimeout(() => {
-                    stateMap.invalidateSize();
-                }, 100);
-            }
-        });
-    } else {
+    if (!stateCode || stateCode === "") {
         console.warn("Nenhum estado selecionado.");
+        return;
     }
+
+    const statesResultText = document.querySelector('.states-result-text');
+    statesResultText.classList.add('disabled');
+
+    const statesMap = document.querySelector('.states-map');
+    const schoolsList = document.querySelector('.schools-list');
+    statesMap.classList.remove('disabled');
+    statesMap.classList.add('activated');
+    schoolsList.classList.remove('disabled');
+    schoolsList.classList.add('activated');
+
+    loadStateData(stateCode).then(() => {
+        if (stateMap) {
+            setTimeout(() => {
+                stateMap.invalidateSize();
+            }, 100);
+        }
+    });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
