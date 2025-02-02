@@ -13,7 +13,7 @@ L.tileLayer('', {
     attribution: '&copy; <a href="https://destinosdokite.com.br/index.html">Destinos do Kite</a>',
 }).addTo(map);
 
-fetch('../../assets/static/geojson/brazil-states.geojson')
+fetch('../../assets/static/JSON/geojson/brazil-states.geojson')
     .then((response) => response.json())
     .then((data) => {
         L.geoJSON(data, {

@@ -97,9 +97,9 @@
     padding: 0.5rem 1rem;
     margin: 1rem auto;
     border-radius: 0.5rem;
-    font-weight: 500;
     color: var(--Blue-1);
     background-color: var(--Blue-4);
+    border: none;
     text-decoration: none;
     text-align: bottom;
     align-items: bottom;
@@ -109,7 +109,11 @@
 
 .select-states-btn:hover {
     background-color: var(--Blue-3);
-    color: black;
+}
+
+.select-states-btn a {
+    color: var(--Blue-1);
+    font-weight: 500;
 }
 
 .states-card-group {

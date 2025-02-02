@@ -113,13 +113,13 @@ function initStateMap() {
     stateMap = L.map('state-map', {
         zoomControl: false,
         center: [-15.084058, -53.481445],
-        zoom: 2,
+        zoom: 4,
         maxBounds: [
             [-33.8688, -73.9828],
             [5.2718, -34.7297]
         ],
-        maxZoom: 9,
-        minZoom: 3
+        maxZoom: 10,
+        minZoom: 4
     });
 
     L.tileLayer('#', {
@@ -132,7 +132,23 @@ function userStateChoice() {
     const stateCode = statesForm.value;
 
     if (stateCode && stateCode !== '') {
-        loadStateData(stateCode);
+        const statesResultText = document.querySelector('.states-result-text');
+        statesResultText.classList.add('disabled');
+
+        const statesMap = document.querySelector('.states-map');
+        const schoolsList = document.querySelector('.schools-list');
+        statesMap.classList.remove('disabled');
+        statesMap.classList.add('activated');
+        schoolsList.classList.remove('disabled');
+        schoolsList.classList.add('activated');
+
+        loadStateData(stateCode).then(() => {
+            if (stateMap) {
+                setTimeout(() => {
+                    stateMap.invalidateSize();
+                }, 100);
+            }
+        });
     } else {
         console.warn("Nenhum estado selecionado.");
     }

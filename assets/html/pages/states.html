@@ -19,7 +19,7 @@
 
     <!-- leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous"/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="anonymous" />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="anonymous"></script>
 
@@ -99,7 +99,8 @@
                             Escolha um estado e/ou uma época do ano para filtrar todas as escolas de kitesurf
                             de acordo com as suas preferências.
                         </p>
-                        <select class="form-select m-3 state-container" id="states-form" aria-label="Default select example" name="states-form">
+                        <select class="form-select m-3 state-container" id="states-form"
+                            aria-label="Default select example" name="states-form">
                             <option selected>Selecione um estado</option>
                             <option value="1" name="AC">Acre</option>
                             <option value="2" name="AL">Alagoas</option>
@@ -129,8 +130,9 @@
                             <option value="26" name="SE">Sergipe</option>
                             <option value="27" name="TO">Tocantins</option>
                         </select>
-                        <button type="button" class="select-states-btn">Buscar</button>
-                        <!-- <a href="#states-result" class="select-states-btn" onclick="userStateChoice()">Buscar</a> -->
+                        <button type="button" class="select-states-btn">
+                            <a href="#states-result">Buscar</a>
+                        </button>
                     </div>
                 </div>
                 <div class="col-12 col-md-12 col-lg-12">
@@ -165,16 +167,17 @@
 
     <section class="states-result" id="states-result">
         <div class="container">
+            <div class="states-result-text">
+                <h3 class="page-subtitle">Escolha um estado e veja as escolas de kitesurf presentes nele!</h3>
+                <p class="states-result-description">Todos os resultados vão aparecer aqui após a escolha do estado</p>
+            </div>
             <div class="row g-4">
-                <div class="col-12 col-lg-6">
-                    <div id="state-map" class="states-map-container forget-place"></div>
+                <div class="col-12 col-lg-6 states-map disabled">
+                    <div id="state-map" class="states-map-container"></div>
                 </div>
-
-                <div class="col-12 col-lg-6">
-                    <div class="schools-list">
-                        <h3 class="mb-3">Escolas em <span id="state-name">[Estado]</span></h3>
-                        <div id="schools-container" class="schools-container"></div>
-                    </div>
+                <div class="col-12 col-lg-6 schools-list disabled">
+                    <h3 class="mb-3">Escolas em <span id="state-name">[Estado]</span></h3>
+                    <div id="schools-container" class="schools-container"></div>
                 </div>
             </div>
         </div>

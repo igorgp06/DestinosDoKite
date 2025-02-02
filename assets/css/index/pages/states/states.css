@@ -16,11 +16,37 @@
     text-align: center;
 }
 
+.states-result .states-result-text {
+    margin-bottom: 20rem;
+    align-items: top;
+    justify-content: top;
+    flex-direction: column;
+    align-items: top;
+}
+
+.states-result .page-subtitle {
+    color: var(--Blue-3);
+    font-weight: 700;
+}
+
+.states-result .states-result-description {
+    font-size: 2rem;
+    font-family: var(--Padrao);
+}
+
 .states-map-container {
     height: 500px;
     border-radius: 8px;
     background: var(--Blue-2);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.states-map, .schools-list {
+    display: none;
+}
+
+.states-map.activated, .schools-list.activated {
+    display: block;
 }
 
 .schools-list {
@@ -37,3 +63,10 @@
     border-radius: 8px;
 }
 
+.disabled {
+    display: none !important;
+}
+
+.activated {
+    display: block !important;
+}
