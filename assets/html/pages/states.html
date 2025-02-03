@@ -123,7 +123,6 @@
                             <option value="16" name="PR">Paraná</option>
                             <option value="17" name="PE">Pernambuco</option>
                             <option value="18" name="PI">Piauí</option>
-                            
                             <option value="20" name="RS">Rio Grande do Sul</option>
                             <option value="21" name="RN">Rio Grande do Norte</option>
                             <option value="22" name="RO">Rondônia</option>
@@ -162,6 +161,16 @@
                                 <a href="contact.html" class="states-card-btn">Entre em Contato</a>
                             </div>
                         </div>
+                        <div class="card last-card" style="width: 18rem;">
+                            <div class="card-body">
+                                <h5 class="card-title">Como usar o Guia?</h5>
+                                <p class="card-text">
+                                    Para usar o guia basta apenas selecionar o estado que você tem interesse
+                                    em conhecer as escolas de kitesurf e clicar em buscar, o site irá filtrar
+                                    automaticamente as escolas no estado em que você selecionou.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -170,16 +179,16 @@
 
     <section class="states-result" id="states-result">
         <div class="container">
-            <div class="states-result-text">
-                <h3 class="page-subtitle">Escolha um estado e veja as escolas de kitesurf presentes nele!</h3>
-                <p class="states-result-description">Todos os resultados vão aparecer aqui após a escolha do estado</p>
-            </div>
-            <div class="row g-4">
-                <div class="col-12 col-lg-6 states-map disabled">
+            <div class="row align-items-center text-center">
+                <div class="col-12 states-result-text">
+                    <h3 class="page-subtitle">Escolha um estado e veja as escolas de kitesurf presentes nele!</h3>
+                    <p class="states-result-description">Todos os resultados vão aparecer aqui após a escolha do estado</p>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 states-map disabled">
                     <div id="state-map" class="states-map-container"></div>
                 </div>
-                <div class="col-12 col-lg-6 schools-list disabled">
-                    <h3 class="mb-3">Escolas em <span id="state-name">[Estado]</span></h3>
+                <div class="col-12 col-md-12 col-lg-6 schools-list disabled">
+                    <h3 class="m-3 page-subtitle">Escolas em <span id="state-name">[Estado]</span></h3>
                     <div id="schools-container" class="schools-container"></div>
                 </div>
             </div>

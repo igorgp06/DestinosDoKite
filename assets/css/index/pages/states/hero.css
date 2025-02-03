@@ -129,7 +129,7 @@
     max-width: 300px;
     height: 250px;
     max-height: 400px;
-    background-color: var(--Blue-2);
+    background-color: var(--Blue-1);
     border-radius: 0.5rem;
     overflow: hidden;
     text-align: center;
@@ -141,14 +141,19 @@
 .states-card-group .card:hover {
     transform: scale(1.01);
     box-shadow: 1px 1px 0 var(--Blue-5);
-    background-color: var(--Blue-1);
     border-radius: 1rem;
 }
 
 .states-card-group .card-title {
-    font-size: 1.2rem;
-    font-weight: 650;
+    font-size: 1.4rem;
+    font-weight: 600;
     font-family: var(--Destaque);
+}
+
+.states-card-group .card-text {
+    font-size: 1.1rem;
+    font-weight: 475;
+    font-family: var(--Padrao);
 }
 
 .states-card-group .states-card-btn {
@@ -157,6 +162,7 @@
     font-weight: 500;
     color: var(--Blue-1);
     background-color: var(--Blue-4);
+    font-family: var(--Padrao);
     text-decoration: none;
     text-align: bottom;
     align-items: bottom;
@@ -205,6 +211,15 @@
     }
 }
 
+@media (max-width: 1199px) {
+    .states-card-group .last-card {
+        width: 100%;
+        max-width: 610px;
+        height: 175px;
+        max-height: 250px;
+    }
+}
+
 @media (max-width: 991px) {
     .states-hero {
         min-height: 95vh;
@@ -239,6 +254,13 @@
         max-width: 400px;
         height: 300px;
         max-height: 400px;
+    }
+
+    .states-card-group .last-card {
+        width: 100%;
+        max-width: 610px;
+        height: 175px;
+        max-height: 250px;
     }
 
     .states-card-group .card-title {

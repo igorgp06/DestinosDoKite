@@ -28,6 +28,7 @@ const datedSchools = [
         name: "Escola Teste 1",
         location: "Imbituba",
         season: "Ano Todo",
+        description: "Escola Teste 1",
         link: "#",
         lat: -27.59,
         lng: -48.55,
@@ -37,9 +38,20 @@ const datedSchools = [
         name: "Escola Teste 2",
         location: "Favela da Rocinha",
         season: "Ano Todo",
+        description: "Escola Teste 2",
         link: "#",
         lat: -22.92,
         lng: -43.17,
+        state: "19"
+    },
+    {
+        name: "Escola Teste 3",
+        location: "aaaa socorro",
+        season: "Ano Todo",
+        description: "Escola Teste 3",
+        link: "#",
+        lat: -21.92,
+        lng: -42.17,
         state: "19"
     }
 ];
@@ -112,10 +124,11 @@ function displaySchools(schools) {
     schools.forEach(school => {
         const html = `
             <div class="school-card">
-                <h5>${school.name}</h5>
-                <p>${school.location}</p>
-                <p>Temporada: ${school.season}</p>
-                <a href="${school.link}" class="btn btn-primary">Ver Detalhes</a>
+                <h5 class="states-result-card-title">${school.name}</h5>
+                <p class="states-result-card-location">${school.location}</p>
+                <p class="states-result-card-season">Melhor temporada: ${school.season}</p>
+                <p class="states-result-card-description">Informações: ${school.description}</p>
+                <a target="_blank" class="states-card-btn" href="${school.link}">Ver Detalhes</a>
             </div>
         `;
         container.insertAdjacentHTML('beforeend', html);
