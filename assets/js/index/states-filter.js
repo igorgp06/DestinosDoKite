@@ -111,7 +111,7 @@ async function loadStateData(stateCode) {
 
 function displaySchools(schools) {
     const container = document.getElementById('schools-container');
-    container.innerHTML = ''; 
+    container.innerHTML = '';
 
     if (stateMap) {
         stateMap.eachLayer(layer => {
@@ -128,7 +128,7 @@ function displaySchools(schools) {
                 <p class="states-result-card-location">${school.location}</p>
                 <p class="states-result-card-season">Melhor temporada: ${school.season}</p>
                 <p class="states-result-card-description">Informações: ${school.description}</p>
-                <a target="_blank" class="states-card-btn" href="${school.link}">Ver Detalhes</a>
+                <button type="button" class="states-card-btn view-details-btn" data-school='${JSON.stringify(school)}'>Ver Detalhes</button>
             </div>
         `;
         container.insertAdjacentHTML('beforeend', html);
@@ -136,17 +136,75 @@ function displaySchools(schools) {
         const kiteMarker = L.icon({
             iconUrl: '../../static/images/global/kitesurf.png',
             shadowUrl: '',
-
             iconSize: [17, 17],
             shadowSize: [0, 0],
             iconAnchor: [12.5, 12.5],
             shadowAnchor: [0, 0],
             popupAnchor: [-10, -8],
-        })
+        });
 
-        const marker = L.marker([school.lat, school.lng], {icon: kiteMarker}).addTo(stateMap);
+        const marker = L.marker([school.lat, school.lng], { icon: kiteMarker }).addTo(stateMap);
         marker.bindPopup(`<b>${school.name}</b><br>${school.location}`);
     });
+
+    document.querySelectorAll('.view-details-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const schoolData = JSON.parse(button.getAttribute('data-school'));
+            showSchoolDetails(schoolData);
+        });
+    });
+}
+
+function showSchoolDetails(school) {
+    document.getElementById('school-name').textContent = school.name;
+    document.getElementById('school-kitepoint').textContent = school.kitepoint || "Não informado";
+    document.getElementById('school-loc').textContent = school.location || "Não informado";
+    document.getElementById('airport').textContent = school.airport || "Não informado";
+    document.getElementById('wind-season').textContent = school.season || "Não informado";
+    document.getElementById('school-description').textContent = school.description || "Sem descrição disponível";
+
+    /* 
+    
+    erro d responsividade com o carrousel, corrigir e dps descomentar
+
+        const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.innerHTML = '';
+
+    if (school.images && school.images.length > 0) {
+        school.images.forEach((image, index) => {
+            const itemClass = index === 0 ? 'carousel-item active' : 'carousel-item';
+            const imgHtml = `
+                <div class="${itemClass}">
+                    <img src="${image}" class="d-block w-100" alt="Imagem ${index + 1}">
+                </div>
+            `;
+            carouselInner.insertAdjacentHTML('beforeend', imgHtml);
+        });
+    } else {
+        carouselInner.innerHTML = `
+            <div class="carousel-item active">
+                <img src="#" class="d-block w-100" alt="Imagem padrão">
+            </div>
+        `;
+    }
+    
+    */
+
+
+
+    const schoolDetailsSection = document.querySelector('.school-details');
+    schoolDetailsSection.classList.add('visible');
+
+    const closeButton = document.querySelector('.school-close');
+    closeButton.onclick = () => {
+        schoolDetailsSection.classList.remove('visible');
+    };
+
+    window.onclick = (event) => {
+        if (event.target === schoolDetailsSection) {
+            schoolDetailsSection.classList.remove('visible');
+        }
+    };
 }
 
 function getSchoolsByState(stateCode) {

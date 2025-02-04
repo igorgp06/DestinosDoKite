@@ -27,6 +27,7 @@
     <style>
         body {
             overflow-x: hidden;
+            background-color: var(--Blue-1) !important;
         }
     </style>
 </head>
@@ -182,7 +183,7 @@
             <div class="row align-items-center text-center">
                 <div class="col-12 states-result-text">
                     <h3 class="page-subtitle">Escolha um estado e veja as escolas de kitesurf presentes nele!</h3>
-                    <p class="states-result-description">Todos os resultados vão aparecer aqui após a escolha do estado</p>
+                    <p class="states-result-description">Todos os resultados vão aparecer aqui após a sua escolha.</p>
                 </div>
                 <div class="col-12 col-md-12 col-lg-6 states-map disabled">
                     <div id="state-map" class="states-map-container"></div>
@@ -191,6 +192,27 @@
                     <h3 class="m-3 page-subtitle">Escolas em <span id="state-name">[Estado]</span></h3>
                     <div id="schools-container" class="schools-container"></div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="school-details">
+        <div class="container">
+            <div class="school-close">
+                <i class="bi bi-x-lg"></i>
+            </div>
+            <div class="row align-items-center text-center">
+                <div class="col-12 col-md-12 col-lg-6 school-details-text">
+                    <h2 id="school-name">[Escola/kitepoint]</h2>
+                    <p id="school-kitepoint">[Escola ou kitepoint?]</p>
+                    <p id="school-loc">[Localização e como chegar]</p>
+                    <p id="airport">[Aeroporto mais próximo]</p>
+                    <p id="wind-season">[Tempo de vento]</p>
+                    <p id="school-description">[Descrição da escola]</p>
+                </div>
+
+
+
             </div>
         </div>
     </section>
