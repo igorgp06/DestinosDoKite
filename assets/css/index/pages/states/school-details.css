@@ -160,6 +160,43 @@
     color: var(--Blue-2);
 }
 
+@media (max-width: 1399px) {
+    .school-cards {
+        display: flexbox;
+        gap: 0.5rem;
+    }
+    
+    .school-cards .card {
+        flex: 1 1 calc(100% - 1rem);
+    }
+}
+
+@media (max-width: 991px) {
+    .school-video-container {
+        width: auto !important;
+        max-width: 500px;
+        min-width: 450px;
+    }
+
+    .school-video {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .school-cards .card-title {
+        font-size: 1.5rem;
+    }
+
+    .school-cards .card-text {
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .school-cards .card-link a, i {
+        font-size: 1.6rem;
+    }
+}
 
 @media (max-width: 768px) {
     .school-details-container {
@@ -179,6 +216,12 @@
 }
 
 @media (max-width: 576px) {
+    .school-video-container {
+        width: auto;
+        max-width: 350px;
+        min-width: 300px;
+    }
+
     .school-details-text {
         font-size: 1rem;
     }
@@ -189,5 +232,11 @@
 
     .school-cards .card-text {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 340px) {
+    .school-video-container {
+        display: none;
     }
 }
