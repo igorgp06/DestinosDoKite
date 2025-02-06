@@ -159,9 +159,8 @@ function showSchoolDetails(school) {
     document.getElementById('wind-season').textContent = school.season || "Não informado";
     document.getElementById('school-description').textContent = school.description || "Sem descrição disponível";
 
-    // Atualiza o carrossel de imagens
     const carouselInner = document.querySelector('.carousel-inner');
-    carouselInner.innerHTML = ''; // Limpa o carrossel atual
+    carouselInner.innerHTML = '';
 
     if (school.images && school.images.length > 0) {
         school.images.forEach((image, index) => {
