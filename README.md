@@ -30,6 +30,8 @@ Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão list
 
 - [x] Bug 4: o título do menu deveria aparecer em telas menores que 1200px porém isso não acontece. Bug encontrado na versão 4.7, resolvido na versão 4.8.
 
+- [x] Bug 5: o ícone do menu estava funcionando, porém, estava invisível na tela. Bug encontrado na versão 6.5, resolvido na versão 6.6.
+
 ## Licença
 
 Este código está sob uma licença personalizada que permite apenas a **visualização** do código.  
