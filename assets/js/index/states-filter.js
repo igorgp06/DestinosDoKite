@@ -33,23 +33,18 @@ const datedSchools = [
         lat: -27.59,
         lng: -48.55,
         state: "24",
-        video: "https://youtu.be/CJoraFvGl0I?si=rOqCEytA8tNrsfZu",
         images: [
             "../../static/images/schools/school-1-24/1.jpg",
             "../../static/images/schools/school-1-24/2.jpg",
-            /* "../../static/images/schools/school-1-24/3.jpg" */
         ],
+        video: "../../static/videos/school1/video.mp4",
+        cardText: "Esta é uma breve descrição da Escola Teste 1. Aqui você encontra tudo sobre kitesurf!",
+        socialMedia: [
+            { platform: "whatsapp", link: "#" },
+            { platform: "instagram", link: "#" },
+            { platform: "email", link: "#" }
+        ]
     },
-    {
-        name: "Escola Teste 2",
-        location: "Favela da Rocinha",
-        season: "Ano Todo",
-        description: "Escola Teste 2",
-        link: "#",
-        lat: -22.92,
-        lng: -43.17,
-        state: "19"
-    }
 ];
 
 function showMap() {
@@ -189,6 +184,30 @@ function showSchoolDetails(school) {
         videoElement.style.display = 'none';
     }
 
+    const cardTextElement = document.querySelector('.school-card-text');
+    if (school.cardText) {
+        cardTextElement.textContent = school.cardText;
+    } else {
+        cardTextElement.textContent = "Sem informações disponíveis.";
+    }
+
+    const socialLinksContainer = document.querySelector('.card-social-links');
+    socialLinksContainer.innerHTML = '';
+
+    if (school.socialMedia && school.socialMedia.length > 0) {
+        school.socialMedia.forEach(social => {
+            const iconClass = getSocialIconClass(social.platform);
+            const linkHtml = `
+                <a class="card-social-link" href="${social.link}" target="_blank">
+                    <i class="${iconClass}"></i>
+                </a>
+            `;
+            socialLinksContainer.insertAdjacentHTML('beforeend', linkHtml);
+        });
+    } else {
+        socialLinksContainer.innerHTML = '<p>Sem redes sociais disponíveis.</p>';
+    }
+
     const footerColor = document.querySelector('.states-footer');
 
     const schoolDetailsSection = document.querySelector('.school-details');
@@ -201,12 +220,31 @@ function showSchoolDetails(school) {
         footerColor.classList.remove('footer-color')
     };
 
-    window.onclick = (event) => {
+    /* 
+
+        corrigir essa função irritante
+    
+        window.onclick = (event) => {
         if (event.target === schoolDetailsSection) {
             schoolDetailsSection.classList.remove('visible');
             footerColor.classList.remove('footer-color')
         }
     };
+    
+    */
+}
+
+function getSocialIconClass(platform) {
+    switch (platform) {
+        case "whatsapp":
+            return "bi bi-whatsapp";
+        case "instagram":
+            return "bi bi-instagram";
+        case "email":
+            return "bi bi-envelope";
+        default:
+            return "bi bi-whatsapp";
+    }
 }
 
 function getSchoolsByState(stateCode) {

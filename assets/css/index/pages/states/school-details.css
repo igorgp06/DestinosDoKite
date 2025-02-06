@@ -4,7 +4,7 @@
 
 .school-details {
     margin: 0 auto;
-    padding: 1rem;
+    padding: 2rem;
     min-height: 95vh;
     display: none;
     opacity: 0;
@@ -22,12 +22,11 @@
 }
 
 .school-close {
-    font-size: 1.7rem;
+    font-size: 2rem;
     margin: 1rem;
     display: flex;
-    align-items: end;
-    justify-content: end;
-    text-align: end;
+    align-items: center;
+    justify-content: flex-end;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
 }
@@ -37,48 +36,158 @@
 }
 
 .school-details-container {
+    gap: 2rem;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
-    flex-direction: row;
+    flex-wrap: wrap;
     text-align: center;
 }
 
 .school-details-text {
     font-size: 1.2rem;
     font-weight: 500;
-    margin: 1rem;
-    padding: 0;
+    border-radius: 15px;
+    padding: 1.5rem;
+    background-color: var(--Blue-1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    transition: all 0.4s ease-in-out;
+}
+
+.school-details-text > * {
+    margin: 1rem;
+    transition: all 0.4s ease-in-out;
+}
+
+.school-details-text:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
 .school-video {
-    margin: 0;
     padding: 0;
     width: 100%;
-    max-width: 350px;
-
-    border-radius: 0.5rem;
+    max-width: 500px;
+    height: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-in-out;
 }
 
 .school-carrousel {
-    width: 75%;
-    height: 75%;
+    width: 100%;
+    max-width: 600px;
 }
 
-@media (min-width: 768px) {
-    .school-details-text,
-    .school-cards {
-        flex-direction: row;
-        justify-content: space-between;
+.carousel-inner img {
+    object-fit: cover;
+    height: 300px;
+}
+
+.school-cards {
+    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.school-cards .card {
+    flex: 1 1 calc(45% - 1rem);
+    max-width: 350px;
+    height: auto;
+    background-color: var(--Blue-1);
+    border-radius: 1rem;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.4s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.school-cards .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.school-cards .card-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    font-family: var(--Destaque);
+    margin-bottom: 0.5rem;
+}
+
+.school-cards .card-text {
+    font-size: 1.1rem;
+    font-weight: 475;
+    font-family: var(--Padrao);
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.school-cards .card-link {
+    font-size: 1.1rem;
+    font-weight: 475;
+    font-family: var(--Padrao);
+    color: var(--Blue-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    transition: all 0.4s ease-in-out;
+}
+
+.school-cards .card-link a, i {
+    margin: 0.2rem;
+    color: var(--Blue-5);
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+.school-cards .card-link a:hover, i:hover {
+    color: var(--Blue-2);
+}
+
+
+@media (max-width: 768px) {
+    .school-details-container {
+        flex-direction: column;
+        gap: 1.5rem;
     }
 
-    .school-video-container,
+    .school-cards .card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .school-video,
     .school-carrousel {
-        flex-direction: row;
-        justify-content: space-between;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .school-details-text {
+        font-size: 1rem;
+    }
+
+    .school-cards .card-title {
+        font-size: 1.2rem;
+    }
+
+    .school-cards .card-text {
+        font-size: 1rem;
     }
 }
