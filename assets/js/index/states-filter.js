@@ -189,17 +189,22 @@ function showSchoolDetails(school) {
         videoElement.style.display = 'none';
     }
 
+    const footerColor = document.querySelector('.states-footer');
+
     const schoolDetailsSection = document.querySelector('.school-details');
     schoolDetailsSection.classList.add('visible');
+    footerColor.classList.add('footer-color')
 
     const closeButton = document.querySelector('.school-close');
     closeButton.onclick = () => {
         schoolDetailsSection.classList.remove('visible');
+        footerColor.classList.remove('footer-color')
     };
 
     window.onclick = (event) => {
         if (event.target === schoolDetailsSection) {
             schoolDetailsSection.classList.remove('visible');
+            footerColor.classList.remove('footer-color')
         }
     };
 }
