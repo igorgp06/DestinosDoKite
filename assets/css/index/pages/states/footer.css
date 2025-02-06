@@ -10,6 +10,10 @@
     background-color: var(--Blue-1);
 }
 
+.footer-color {
+    background-color: var(--Blue-2);
+}
+
 .states-footer .states-footer-text {
     margin: 1rem;
     padding: 0;

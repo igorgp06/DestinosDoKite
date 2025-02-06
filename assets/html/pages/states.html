@@ -145,8 +145,7 @@
                                 <h5 class="card-title">Nossas Redes Sociais</h5>
                                 <p class="card-text">
                                     Acompanhe nossas redes sociais para ficar por dentro de todas as novidades,
-                                    veja
-                                    de perto o que o kitesurf pode proporcionar para o seu dia-a-dia!
+                                    veja de perto o que o kitesurf pode proporcionar para o seu dia-a-dia!
                                 </p>
                                 <a href="#" class="states-card-btn">Descubra Mais</a>
                             </div>
@@ -201,8 +200,8 @@
             <div class="school-close">
                 <i class="bi bi-x-lg"></i>
             </div>
-            <div class="row align-items-center text-center">
-                <div class="col-12 col-md-12 col-lg-6 school-details-text">
+            <div class="row align-items-center text-center school-details-container">
+                <div class="col-12 col-md-12 col-lg-4 school-details-text">
                     <h2 id="school-name">[Escola/kitepoint]</h2>
                     <p id="school-kitepoint">[Escola ou kitepoint?]</p>
                     <p id="school-loc">[Localização e como chegar]</p>
@@ -210,11 +209,35 @@
                     <p id="wind-season">[Tempo de vento]</p>
                     <p id="school-description">[Descrição da escola]</p>
                 </div>
-
-
-
+                <div class="col-12 col-md-12 col-lg-4 school-video-container">
+                    <video controls class="school-video" type="video/mp4" preload="none" style="width: 100%; height: auto;"></video>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6 school-carrousel">
+                    <div id="carouselExample" class="carousel slide">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../../static/images/index/hero/ft-1-hero-red.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../static/images/index/hero/ft-3-hero-red.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../../static/images/index/hero/ft-1-hero-red.jpg" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
             </div>
-        </div>
     </section>
 
     <footer class="states-footer" id="states-footer">

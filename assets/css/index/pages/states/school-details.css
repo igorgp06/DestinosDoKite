@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
-/* school results */
+/* school-details */
 
 .school-details {
     margin: 0 auto;
-    padding: 0;
+    padding: 1rem;
     min-height: 95vh;
-    background-color: var(--Blue-2);
     display: none;
     opacity: 0;
+    background-color: var(--Blue-2);
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.4s ease-in-out;
 }
 
 .school-details.visible {
@@ -36,14 +36,49 @@
     color: var(--Blue-4);
 }
 
+.school-details-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+}
+
 .school-details-text {
+    font-size: 1.2rem;
+    font-weight: 500;
     margin: 1rem;
     padding: 0;
-    display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    font-size: 1.2rem;
-    font-weight: 500;
+}
+
+.school-video {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    max-width: 350px;
+
+    border-radius: 0.5rem;
+}
+
+.school-carrousel {
+    width: 75%;
+    height: 75%;
+}
+
+@media (min-width: 768px) {
+    .school-details-text,
+    .school-cards {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .school-video-container,
+    .school-carrousel {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }

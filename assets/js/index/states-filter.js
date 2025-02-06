@@ -32,7 +32,13 @@ const datedSchools = [
         link: "#",
         lat: -27.59,
         lng: -48.55,
-        state: "24"
+        state: "24",
+        video: "https://youtu.be/CJoraFvGl0I?si=rOqCEytA8tNrsfZu",
+        images: [
+            "../../static/images/schools/school-1-24/1.jpg",
+            "../../static/images/schools/school-1-24/2.jpg",
+            /* "../../static/images/schools/school-1-24/3.jpg" */
+        ],
     },
     {
         name: "Escola Teste 2",
@@ -42,16 +48,6 @@ const datedSchools = [
         link: "#",
         lat: -22.92,
         lng: -43.17,
-        state: "19"
-    },
-    {
-        name: "Escola Teste 3",
-        location: "aaaa socorro",
-        season: "Ano Todo",
-        description: "Escola Teste 3",
-        link: "#",
-        lat: -21.92,
-        lng: -42.17,
         state: "19"
     }
 ];
@@ -163,12 +159,9 @@ function showSchoolDetails(school) {
     document.getElementById('wind-season').textContent = school.season || "Não informado";
     document.getElementById('school-description').textContent = school.description || "Sem descrição disponível";
 
-    /* 
-    
-    erro d responsividade com o carrousel, corrigir e dps descomentar
-
-        const carouselInner = document.querySelector('.carousel-inner');
-    carouselInner.innerHTML = '';
+    // Atualiza o carrossel de imagens
+    const carouselInner = document.querySelector('.carousel-inner');
+    carouselInner.innerHTML = ''; // Limpa o carrossel atual
 
     if (school.images && school.images.length > 0) {
         school.images.forEach((image, index) => {
@@ -183,14 +176,19 @@ function showSchoolDetails(school) {
     } else {
         carouselInner.innerHTML = `
             <div class="carousel-item active">
-                <img src="#" class="d-block w-100" alt="Imagem padrão">
+                <img src="../../static/images/default.jpg" class="d-block w-100" alt="Imagem padrão">
             </div>
         `;
     }
-    
-    */
 
-
+    const videoElement = document.querySelector('.school-video');
+    if (school.video) {
+        videoElement.src = school.video;
+        videoElement.style.display = 'block';
+    } else {
+        videoElement.src = "";
+        videoElement.style.display = 'none';
+    }
 
     const schoolDetailsSection = document.querySelector('.school-details');
     schoolDetailsSection.classList.add('visible');
