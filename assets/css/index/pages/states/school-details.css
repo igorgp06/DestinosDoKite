@@ -6,8 +6,8 @@
     margin: 0 auto;
     padding: 2rem;
     min-height: 95vh;
-    display: flex; /* TODO: mudar para none e 0 dps de arrumar oq falta */
-    opacity: 1;
+    display: none;
+    opacity: 0;
     background-color: var(--Blue-2);
     align-items: center;
     justify-content: center;
