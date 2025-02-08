@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 0;
     height: auto;
-    min-height: 94vh;
+    min-height: 90vh;
     background-color: var(--Blue-2);
     display: flex;
     align-items: center;
@@ -109,6 +109,10 @@
     transform: scale(1.1);
 }
 
+.index-hero span i {
+    color: var(--Blue-1);
+}
+
 .close-info {
     display: none;
     opacity: 1;
@@ -199,7 +203,6 @@
 
 @media (max-width: 1399px) {
     .index-hero {
-        height: 100vh;
         background-image: none;
     }
 
@@ -227,9 +230,15 @@
 }
 
 @media (max-width: 991px) {
+    .index-hero {
+        background-image: url('../../../../static/svgs/index/hero/blob-haikei-hero-mobile.svg');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+    }
+
     .index-hero .page-title {
         font-size: 2.5rem;
-        margin-top: 1rem;
     }
 
     .hero-description {
@@ -271,9 +280,13 @@
 }
 
 @media (max-width: 768px) {
+    .index-hero {
+        min-height: 80vh;
+    }
+
     .index-hero .page-title {
         font-size: 2.5rem;
-        margin: 2.2rem 0 1rem 0;
+        margin: 0 2rem;
     }
 
     .hero-map {
@@ -297,7 +310,6 @@
 @media (max-width: 767px) {
     .index-hero .page-title {
         font-size: 2.2rem;
-        margin-top: 0.5rem;
     }
 
     .hero-map {
@@ -349,6 +361,10 @@
 }
 
 @media (max-width: 474px) {
+    .index-hero {
+        min-height: 70vh;
+    }
+
     .index-hero .page-title {
         font-size: 2rem;
         margin-top: 0.5rem;

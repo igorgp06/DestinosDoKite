@@ -7,7 +7,7 @@
     padding: 0;
     height: auto;
     min-height: 94vh;
-    background-color: var(--Blue-2);
+    background-color: var(--Blue-1);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -16,18 +16,27 @@
     text-align: center;
     background-image: url('../../../../static/svgs/index/extra/layered-waves-haikei-extra.svg');
     background-size: cover;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
 }
 
 .carrousel-container {
-    width: 75%;
-    height: auto;
-    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+    max-height: 450px;
+}
+
+.carrousel-container .carousel-inner img {
+    object-fit: cover;
+    height: 100%;
+    max-height: 450px;
 }
 
 .extra .page-subtitle {
     color: var(--Blue-4);
+    margin-bottom: 1.5rem;
+    padding: 0;
 }
 
 .extra-description {
@@ -36,28 +45,29 @@
     font-family: var(--Padrao);
 }
 
-.extra-list {
-    font-size: 1.2rem;
-    color: black;
-    font-family: var(--Padrao);
-    text-align: center;
-    list-style: none;
-}
-
-.extra-list span {
-    color: var(--Blue-4);
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
 @media (max-width: 991px) {
+    .extra {
+        min-height: 85vh;
+        max-height: 90vh;
+    }
+
     .extra .page-subtitle {
-        margin: 3rem 0 1rem 0;
+        margin-bottom: 1.9rem;
+    }
+
+    .extra .extra-description {
+        font-size: 1.1rem;
     }
 }
 
 @media (max-width: 767px) {
+    .extra {
+        min-height: 80vh;
+        max-height: 90vh;
+    }
+
     .extra .page-subtitle {
+        font-size: 1.7rem;
         margin: 1rem 0;
     }
 
@@ -67,8 +77,13 @@
 }
 
 @media (max-width: 474px) {
+    .extra {
+        min-height: 70vh;
+        max-height: 80vh;
+    }
+
     .extra .page-subtitle {
         font-size: 1.1rem;
-        margin: 0.5rem;
+        margin-bottom: 0.5rem;
     }
 }

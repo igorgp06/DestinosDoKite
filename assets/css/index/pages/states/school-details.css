@@ -6,8 +6,8 @@
     margin: 0 auto;
     padding: 2rem;
     min-height: 95vh;
-    display: none;
-    opacity: 0;
+    display: flex; /* TODO: mudar para none e 0 dps de arrumar oq falta */
+    opacity: 1;
     background-color: var(--Blue-2);
     align-items: center;
     justify-content: center;
@@ -50,7 +50,7 @@
     border-radius: 15px;
     padding: 1.5rem;
     background-color: var(--Blue-1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
     align-items: center;
     justify-content: center;
     flex-direction: column;
@@ -60,23 +60,11 @@
 
 .school-details-text > * {
     margin: 1rem;
-    transition: all 0.4s ease-in-out;
 }
 
 .school-details-text:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
-.school-video {
-    padding: 0;
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.4s ease-in-out;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.050);
 }
 
 .school-carrousel {
@@ -99,20 +87,20 @@
 
 .school-cards .card {
     flex: 1 1 calc(45% - 1rem);
-    max-width: 350px;
+    max-width: 440px;
     height: auto;
     background-color: var(--Blue-1);
-    border-radius: 1rem;
+    border-radius: 15px;
     overflow: hidden;
     text-align: center;
     justify-content: center;
     align-items: center;
     transition: all 0.4s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.050);
 }
 
 .school-cards .card:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -168,6 +156,7 @@
     
     .school-cards .card {
         flex: 1 1 calc(100% - 1rem);
+        max-width: 70%;
     }
 }
 
@@ -178,10 +167,9 @@
         min-width: 450px;
     }
 
-    .school-video {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .school-cards .card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 
     .school-cards .card-title {

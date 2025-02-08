@@ -26,10 +26,11 @@ const stateNames = {
 const datedSchools = [
     {
         name: "Escola Teste 1",
+        kitepoint: "Escola de Kitesurf", 
         location: "Imbituba",
+        airport: "Aeroporto de Florianópolis",
         season: "Ano Todo",
         description: "Escola Teste 1",
-        link: "#",
         lat: -27.59,
         lng: -48.55,
         state: "24",
@@ -37,10 +38,8 @@ const datedSchools = [
             "../../static/images/schools/school-1-24/1.jpg",
             "../../static/images/schools/school-1-24/2.jpg",
         ],
-        video: "../../static/videos/school1/video.mp4",
         cardText: "Esta é uma breve descrição da Escola Teste 1. Aqui você encontra tudo sobre kitesurf!",
         socialMedia: [
-            { platform: "whatsapp", link: "#" },
             { platform: "instagram", link: "#" },
             { platform: "email", link: "#" }
         ]
@@ -175,15 +174,6 @@ function showSchoolDetails(school) {
         `;
     }
 
-    const videoElement = document.querySelector('.school-video');
-    if (school.video) {
-        videoElement.src = school.video;
-        videoElement.style.display = 'block';
-    } else {
-        videoElement.src = "";
-        videoElement.style.display = 'none';
-    }
-
     const cardTextElement = document.querySelector('.school-card-text');
     if (school.cardText) {
         cardTextElement.textContent = school.cardText;
@@ -236,14 +226,12 @@ function showSchoolDetails(school) {
 
 function getSocialIconClass(platform) {
     switch (platform) {
-        case "whatsapp":
-            return "bi bi-whatsapp";
         case "instagram":
             return "bi bi-instagram";
         case "email":
             return "bi bi-envelope";
         default:
-            return "bi bi-whatsapp";
+            return "";
     }
 }
 
