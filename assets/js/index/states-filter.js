@@ -23,28 +23,19 @@ const stateNames = {
     26: "Sergipe", 27: "Tocantins"
 };
 
-const datedSchools = [
-    {
-        name: "Escola Teste 1",
-        kitepoint: "Escola de Kitesurf", 
-        location: "Imbituba",
-        airport: "Aeroporto de Florianópolis",
-        season: "Ano Todo",
-        description: "Escola Teste 1",
-        lat: -27.59,
-        lng: -48.55,
-        state: "24",
-        images: [
-            "../../static/images/schools/school-1-24/1.jpg",
-            "../../static/images/schools/school-1-24/2.jpg",
-        ],
-        cardText: "Esta é uma breve descrição da Escola Teste 1. Aqui você encontra tudo sobre kitesurf!",
-        socialMedia: [
-            { platform: "instagram", link: "#" },
-            { platform: "email", link: "#" }
-        ]
-    },
-];
+let schoolsData = [];
+
+async function loadSchoolsData() {
+    try {
+        const response = await fetch('../../static/JSON/schools/schools.json');
+        if (!response.ok) {
+            throw new Error(`Erro ao carregar dados de escolas: ${response.status} ${response.statusText}`);
+        }
+        schoolsData = await response.json();
+    } catch (error) {
+        console.error('Erro ao carregar dados de escolas:', error);
+    }
+}
 
 function showMap() {
     const mapElement = document.getElementById('state-map');
@@ -134,7 +125,7 @@ function displaySchools(schools) {
         });
 
         const marker = L.marker([school.lat, school.lng], { icon: kiteMarker }).addTo(stateMap);
-        marker.bindPopup(`<b>${school.name}</b><br>${school.location}`);
+        marker.bindPopup(`<h3>${school.name}</h3><p>${school.location}</p>`);
     });
 
     document.querySelectorAll('.view-details-btn').forEach(button => {
@@ -161,7 +152,7 @@ function showSchoolDetails(school) {
             const itemClass = index === 0 ? 'carousel-item active' : 'carousel-item';
             const imgHtml = `
                 <div class="${itemClass}">
-                    <img src="${image}" class="d-block w-100" alt="Imagem ${index + 1}">
+                    <img src="${image}" class="d-block w-100" alt="Imagem ${index + 1} da ${school.name}">
                 </div>
             `;
             carouselInner.insertAdjacentHTML('beforeend', imgHtml);
@@ -204,7 +195,7 @@ function showSchoolDetails(school) {
     schoolDetailsSection.classList.add('visible');
     footerColor.classList.add('footer-color')
 
-    const closeButton = document.querySelector('.school-close');
+    const closeButton = document.querySelector('.school-close i');
     closeButton.onclick = () => {
         schoolDetailsSection.classList.remove('visible');
         footerColor.classList.remove('footer-color')
@@ -236,7 +227,7 @@ function getSocialIconClass(platform) {
 }
 
 function getSchoolsByState(stateCode) {
-    return datedSchools.filter(school => school.state === stateCode);
+    return schoolsData.filter(school => school.state === stateCode);
 }
 
 function initStateMap() {
@@ -283,7 +274,12 @@ function userStateChoice() {
             }, 100);
         }
     });
+
+    loadSchoolsData().then(() => {
+        loadStateData(stateCode);
+    });
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
     initStateMap();

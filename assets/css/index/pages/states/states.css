@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 /* states */
+
 .states-result {
     margin: 0 auto;
     padding: 0;
@@ -47,6 +48,59 @@
 .states-map.activated,
 .schools-list.activated {
     display: block;
+}
+
+.states-map-container .leaflet-popup-content-wrapper {
+    margin: 0;
+    padding: 0;
+    width: 12rem;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Blue-1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.states-map-container .leaflet-popup-content {
+    margin: 0 !important;
+    padding: 1rem;
+    width: 100%;
+}
+
+.states-map-container .leaflet-popup-content h3 {
+    color: black;
+    font-size: 1.2rem;
+    font-family: var(--Destaque);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+.states-map-container .leaflet-popup-content p {
+    color: black;
+    font-size: 1rem;
+    font-family: var(--Padrao);
+    margin: 0;
+    padding: 0;
+}
+
+.states-map-container .leaflet-popup-close-button {
+    color: var(--Blue-5) !important;
+    font-size: 1.7rem !important;
+    margin: 0.3rem 0.3rem auto;
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.states-map-container .leaflet-popup-close-button:hover {
+    color: var(--Blue-3) !important;
 }
 
 .schools-list {
