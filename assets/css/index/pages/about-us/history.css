@@ -37,6 +37,14 @@
     font-weight: 500;
 }
 
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--Blue-1);
+    padding: 1rem;
+    border-radius: 8px;
+}
+
 @media (max-width: 767px) {
     .history-subtitle {
         font-size: 2rem;

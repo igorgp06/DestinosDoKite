@@ -148,6 +148,20 @@
     color: var(--Blue-2);
 }
 
+.school-cards .school-card-number {
+    font-size: 1.1rem;
+    font-weight: 450;
+    font-family: var(--Padrao);
+    color: black;
+}
+
+.school-cards .school-card-number span {
+    font-size: 1.1rem;
+    font-weight: 450;
+    font-family: var(--Padrao);
+    color: var(--Blue-5);
+}
+
 @media (max-width: 1399px) {
     .school-cards {
         display: flexbox;

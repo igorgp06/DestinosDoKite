@@ -108,7 +108,6 @@ function displaySchools(schools) {
                 <h5 class="states-result-card-title">${school.name}</h5>
                 <p class="states-result-card-location">${school.location}</p>
                 <p class="states-result-card-season">Melhor temporada: ${school.season}</p>
-                <p class="states-result-card-description">Informações: ${school.description}</p>
                 <button type="button" class="states-card-btn view-details-btn" data-school='${JSON.stringify(school)}'>Ver Detalhes</button>
             </div>
         `;
@@ -142,7 +141,6 @@ function showSchoolDetails(school) {
     document.getElementById('school-loc').textContent = school.location || "Não informado";
     document.getElementById('airport').textContent = school.airport || "Não informado";
     document.getElementById('wind-season').textContent = school.season || "Não informado";
-    document.getElementById('school-description').textContent = school.description || "Sem descrição disponível";
 
     const carouselInner = document.querySelector('.carousel-inner');
     carouselInner.innerHTML = '';
@@ -176,14 +174,26 @@ function showSchoolDetails(school) {
     socialLinksContainer.innerHTML = '';
 
     if (school.socialMedia && school.socialMedia.length > 0) {
+        let whatsappNumberDisplayed = false;
+
         school.socialMedia.forEach(social => {
-            const iconClass = getSocialIconClass(social.platform);
-            const linkHtml = `
-                <a class="card-social-link" href="${social.link}" target="_blank">
-                    <i class="${iconClass}"></i>
-                </a>
-            `;
-            socialLinksContainer.insertAdjacentHTML('beforeend', linkHtml);
+            if (social.platform === "number") {
+                if (!whatsappNumberDisplayed) {
+                    const numberHtml = `
+                        <p class="school-card-number">Ou entre em contato pelo WhatsApp: <span>${social.number}</span></p>
+                    `;
+                    socialLinksContainer.insertAdjacentHTML('beforeend', numberHtml);
+                    whatsappNumberDisplayed = true;
+                }
+            } else {
+                const iconClass = getSocialIconClass(social.platform);
+                const linkHtml = `
+                    <a class="card-social-link" href="${social.link}" target="_blank">
+                        <i class="${iconClass}"></i>
+                    </a>
+                `;
+                socialLinksContainer.insertAdjacentHTML('beforeend', linkHtml);
+            }
         });
     } else {
         socialLinksContainer.innerHTML = '<p>Sem redes sociais disponíveis.</p>';
@@ -221,6 +231,8 @@ function getSocialIconClass(platform) {
             return "bi bi-instagram";
         case "email":
             return "bi bi-envelope";
+        case "number":
+            return ``;
         default:
             return "";
     }
@@ -280,8 +292,9 @@ function userStateChoice() {
     });
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     initStateMap();
+
     document.querySelector('.select-states-btn').addEventListener('click', userStateChoice);
 });
+
