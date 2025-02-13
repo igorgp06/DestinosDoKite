@@ -16,6 +16,35 @@
     text-align: center;
 }
 
+.history-subtitle {
+    font-size: 3rem;
+    font-weight: 650;
+    color: var(--Blue-1);
+}
+
+.floating-kite {
+    width: 80px;
+    animation: all 3s ease-in-out infinite;
+    margin-bottom: 1rem;
+}
+
+@keyframes all {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+
+    }
+
+    100% {
+        transform: translateY(0px);
+
+    }
+}
+
+
 .history-text {
     margin: 0;
     padding: 1rem;
@@ -26,11 +55,6 @@
     align-items: center;
 }
 
-.history-subtitle {
-    font-size: 3rem;
-    font-weight: 650;
-    color: var(--Blue-1);
-}
 
 .history-description {
     font-size: 1.1rem;

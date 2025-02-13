@@ -145,7 +145,7 @@
 }
 
 .school-cards .card-link a:hover, i:hover {
-    color: var(--Blue-2);
+    color: var(--Blue-1);
 }
 
 .school-cards .school-card-number {
