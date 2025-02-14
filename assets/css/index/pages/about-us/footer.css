@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--Blue-2);
+    background-color: #e5e7eb;
 }
 
 .about-us-footer .about-us-footer-text {
@@ -28,7 +28,7 @@
 }
 
 .about-us-footer .footer-creator:hover {
-    color: var(--Blue-1);
+    color: var(--Blue-5);
     transform: scale(1.1);
     transition: all 0.4s ease-in-out;
 } 
