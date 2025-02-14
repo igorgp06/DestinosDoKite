@@ -26,7 +26,7 @@
     display: inline-block;
 }
 
-.page-title::after {
+.about .page-title::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -95,20 +95,54 @@
     font-weight: 700;
     color: black;
     text-align: center;
+    font-family: var(--Destaque);
 }
 
 .about-card-group .card-text {
     font-size: 1rem;
-    font-weight: 550;
+    font-weight: 450;
     color: black;
     text-align: center;
+    font-family: var(--Padrao);
 }
 
 .about-description {
-    font-size: 1.1rem;
-    font-weight: 550;
+    font-size: 1.3rem;
+    font-weight: 450;
     color: black;
     text-align: center;
+    font-family: var(--Padrao);
+}
+
+.about-us-buttons {
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-us-buttons button {
+    padding: 0.6rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 1.8rem;
+    background-color: var(--Blue-3);
+    color: white;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
+
+.about-us-buttons button:hover {
+    background-color: var(--Blue-5);
+    scale: 1.03;
+}
+
+.about-us-buttons button a {
+    text-decoration: none;
+    color: white;
+    font-family: var(--Destaque);
 }
 
 @media (max-width: 767px) {

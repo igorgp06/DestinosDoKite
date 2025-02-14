@@ -16,9 +16,9 @@
     text-align: center;
 }
 
-.history-subtitle {
-    font-size: 3rem;
-    font-weight: 650;
+.history .page-subtitle {
+    font-size: 2.6rem;
+    font-weight: 700;
     color: var(--Blue-1);
 }
 
@@ -44,8 +44,9 @@
     }
 }
 
-
-.history-text {
+.history-description {
+    font-size: 1.2rem;
+    font-weight: 450;
     margin: 0;
     padding: 1rem;
     display: flex;
@@ -53,20 +54,7 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-}
-
-
-.history-description {
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-.chart-container {
-    max-width: 800px;
-    margin: 0 auto;
-    background: var(--Blue-1);
-    padding: 1rem;
-    border-radius: 8px;
+    font-family: var(--Padrao);
 }
 
 @media (max-width: 767px) {

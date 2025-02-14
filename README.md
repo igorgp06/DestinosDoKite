@@ -32,6 +32,8 @@ Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão list
 
 - [x] Bug 5: o ícone do menu estava funcionando, porém, estava invisível na tela. Bug encontrado na versão 6.5, resolvido na versão 6.6.
 
+- [x] Bug 6: todos os elementos com a classe `page-subtitle` tem uma animação indesejada. Bug encontrado na versão 7.1, resolvido na versão 7.2.
+
 ## Licença
 
 Este código está sob uma licença personalizada que permite apenas a **visualização** do código.  

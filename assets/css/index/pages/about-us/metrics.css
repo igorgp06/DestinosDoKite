@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+/* about-us graphic */
+
+.metrics {
+    margin: 0 auto;
+    padding: 1rem;
+    height: auto;
+    min-height: 95vh;
+    background-color: var(--Blue-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.metrics .page-title {
+    font-size: 4rem;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    color: var(--Blue-4);
+}
+
+.metrics .page-title::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--Blue-3);
+}
+
+.metrics .metrics-description {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: black;
+    font-family: var(--Padrao);
+}
+
+.chart-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--Blue-1);
+    padding: 1rem;
+    border-radius: 8px;
+}
