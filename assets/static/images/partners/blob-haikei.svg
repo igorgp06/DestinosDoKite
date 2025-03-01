@@ -1,8 +1,0 @@
-<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-    <g transform="matrix(1,0,0,1,413.3,258.2)">
-        <path transform="matrix(1.9,0,0,1.6,374.2,14.3)"
-            d="M 7.5 -96.7 C 45 4.6 -18.2 152.8 -131.4 235.9 C -244.6 319 -407.8 337.1 -489.9 271 C -572 204.8 -573 54.5 -528.9 -55.8 C -484.8 -166.2 -395.7 -236.5 -282 -244.5 C -168.3 -252.5 -30.1 -198.1 7.5 -96.7"
-            fill="#f2f2f2"></path>
-    </g>
-</svg>
