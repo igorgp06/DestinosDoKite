@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--Blue-1);
+    background-color: var(--Blue-2);
 }
 
 .partners-footer .partners-footer-text {
@@ -28,7 +28,7 @@
 }
 
 .partners-footer .footer-creator:hover {
-    color: var(--Blue-5);
+    color: var(--Blue-1);
     transform: scale(1.1);
     transition: all 0.4s ease-in-out;
 } 

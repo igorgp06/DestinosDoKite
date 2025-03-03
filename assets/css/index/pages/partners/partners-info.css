@@ -1,20 +1,20 @@
 @charset "UTF-8";
 
-/* partners hero */
+/* partners info */
 
-.partners-hero {
+.partners-info {
     margin: 0 auto;
     padding: 0;
     height: auto;
-    min-height: 93vh;
+    min-height: 100vh;
     background-color: var(--Blue-2);
     display: flex;
     align-items: center;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url('../../../../static/svgs/index/partners/layered-waves-haikei-bottom.svg');
+    background-image: url('../../../../static/svgs/index/partners/layered-waves-haikei-top.svg');
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
     background-repeat: no-repeat;
 }

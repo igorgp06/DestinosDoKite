@@ -1,0 +1,93 @@
+@charset "UTF-8";
+
+/* hero */
+
+.partners-cards-section {
+    margin: 0 auto;
+    padding: 0;
+    height: auto;
+    min-height: 40vh;
+    background-color: var(--Blue-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.partners-card-container {
+    width: 15rem;
+    height: 20rem;
+    max-width: 320px;
+    max-height: 450px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 0.6rem;
+}
+
+.partners-card {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: var(--Blue-2);
+    border-radius: 10px;
+    transition: 2s;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.050);
+}
+
+.partners-card-container:hover .partners-card {
+    transform: perspective(50px) rotateX(2deg) scale(0.95);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.partners-card-logo {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transition: 1.2s ease-in-out;
+    z-index: 2;
+}
+
+.partners-card-logo-1 {
+    background-image: url('../../../../static/images/global/logo-1.jpeg');
+}
+
+.partners-card-logo-2 {
+    background-image: url('../../../../static/images/partners/logos/IG-Solutions.png');
+}
+
+.partners-card-container:hover .partners-card-logo {
+    transform: translateY(-60px) scale(1.2);
+}
+
+.partners-card-text {
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(60px);
+    transition: 1.2s ease-in-out;
+}
+
+.partners-card-text h3 {
+    font-size: 1.6rem;
+    color: black;
+    font-family: var(--Destaque); /* TODO: fazer um efeito de mudança de tamanho da fonte no efeito hover */
+}
+
+.partners-card-text p {
+    font-size: 1.2rem;
+    color: black;
+    font-family: var(--Padrao);
+}
+
+.partners-card-container:hover .partners-card-text {
+    opacity: 1;
+    transform: translateY(100px);
+}
