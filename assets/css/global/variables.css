@@ -14,6 +14,7 @@
     --Blue-3: #797f8d;
     --Blue-4: #6c778c;
     --Blue-5: #4e5873;
+    --Black: #222;
 
     /* substuição das cores do bootstrap */
     --bs-primary: var(--Blue-1);

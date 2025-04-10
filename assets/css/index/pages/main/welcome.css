@@ -2,22 +2,18 @@
 
 /* hero */
 
-.welcome{
+.welcome {
     margin: 0 auto;
     padding: 0;
     height: auto;
     min-height: 90vh;
-    background-color: var(--Blue-2);
+    background-color: var(--Blue-1);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    background-image: url('../../../../static/svgs/index/hero/blob-haikei-hero.svg');
-    background-size: cover;
-    background-position: right;
-    background-repeat: no-repeat;
 }
 
 .welcome .page-title .destaque {
@@ -33,13 +29,13 @@
     align-items: center;
 }
 
-.hero-description {
+.welcome-description {
     font-size: 1.2rem;
     color: black;
     font-family: var(--Padrao);
 }
 
-.hero-buttons {
+.welcome-buttons {
     margin: 1rem auto;
     display: flex;
     align-items: center;
@@ -47,7 +43,23 @@
     gap: 1rem;
 }
 
-.hero-buttons button {
+.welcome-buttons i {
+    font-size: 1.5rem;
+    color: var(--Blue-1);
+}
+
+.welcome-buttons .custom-icon-kiteguy {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../../static/images/global/kitesurf.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.welcome-buttons a {
+    text-decoration: none;
+    color: white;
     padding: 0.6rem;
     font-size: 1.1rem;
     font-weight: 500;
@@ -59,14 +71,9 @@
     transition: all 0.4s ease-in-out;
 }
 
-.hero-buttons button:hover {
-    background-color: var(--Blue-5);
-    scale: 1.03;
-}
-
-.hero-buttons button a {
-    text-decoration: none;
-    color: white;
+.welcome-buttons a:hover {
+    background-color: var(--Blue-4);
+    transform: scale(1.05);
 }
 
 .map-container {
@@ -82,6 +89,7 @@
     background-color: transparent;
     position: relative;
 }
+
 #map svg {
     filter: drop-shadow(0 2px 8px rgba(242, 242, 242, 0.75));
 }
@@ -127,7 +135,8 @@
     opacity: 1;
 }
 
-.open-info, .close-info {
+.open-info,
+.close-info {
     transition: all 0.4s ease;
 }
 
@@ -180,7 +189,7 @@
 
 .map-container .leaflet-popup-close-button {
     font-size: 1.3rem !important;
-    margin: 0.3rem ;
+    margin: 0.3rem;
 }
 
 .map-container .leaflet-popup-content a {
@@ -224,7 +233,7 @@
         font-size: 1.6rem;
     }
 
-    .hero-description {
+    .welcome-description {
         font-size: 1rem;
     }
 }
@@ -241,16 +250,16 @@
         font-size: 2.5rem;
     }
 
-    .hero-description {
+    .welcome-description {
         font-size: 1.1rem;
         margin: 0;
     }
 
-    .hero-buttons {
+    .welcome-buttons {
         margin: 1rem 0 2rem 0;
     }
 
-    .hero-buttons button {
+    .welcome-buttons button {
         padding: 0.5rem;
         font-size: 0.9rem;
     }
@@ -320,7 +329,7 @@
     .map-info-buttons {
         padding: 0.3rem 0.4rem;
     }
-    
+
     .map-info-buttons span {
         font-size: 0.9rem;
     }
@@ -370,7 +379,7 @@
         margin-top: 0.5rem;
     }
 
-    .welcome .hero-description {
+    .welcome .welcome-description {
         font-size: 0.9rem;
         font-weight: 500;
     }
