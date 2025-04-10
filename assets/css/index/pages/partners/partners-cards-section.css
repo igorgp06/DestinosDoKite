@@ -76,13 +76,13 @@
 }
 
 .partners-card-text h3 {
-    font-size: 1.6rem;
+    font-size: 0.6rem;
     color: black;
     font-family: var(--Destaque); /* TODO: fazer um efeito de mudança de tamanho da fonte no efeito hover */
 }
 
 .partners-card-text p {
-    font-size: 1.2rem;
+    font-size: 0.2rem;
     color: black;
     font-family: var(--Padrao);
 }
@@ -90,4 +90,9 @@
 .partners-card-container:hover .partners-card-text {
     opacity: 1;
     transform: translateY(100px);
+
+}
+
+@media (max-width: 575px) {
+
 }
