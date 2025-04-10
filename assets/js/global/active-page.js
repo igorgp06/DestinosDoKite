@@ -7,5 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (linkHref === currentPath) {
             link.parentElement.classList.add('active');
         }
+        if (linkHref === '') {
+            link.parentElement.classList.add('active');
+        }
     });
 });
