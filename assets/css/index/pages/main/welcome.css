@@ -16,8 +16,21 @@
     text-align: center;
 }
 
+.welcome .page-title {
+    margin: 1rem 0;
+    padding: 0;
+}
+
 .welcome .page-title .destaque {
     text-decoration: underline;
+}
+
+.welcome .page-subtitle {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--Blue-5);
+    font-family: var(--font-1);
+    margin: 0;
 }
 
 .hero-text {
@@ -32,7 +45,7 @@
 .welcome-description {
     font-size: 1.2rem;
     color: black;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
 }
 
 .welcome-buttons {
@@ -160,7 +173,7 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--Blue-1);
-    font-family: var(--Destaque);
+    font-family: var(--font-1);
     margin-top: 0;
 }
 
@@ -168,7 +181,7 @@
     color: var(--Blue-1);
     font-size: 0.9rem;
     font-weight: 545;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
     margin: 5px 0;
 }
 
@@ -295,7 +308,7 @@
 
     .welcome .page-title {
         font-size: 2.5rem;
-        margin: 0 2rem;
+        margin: 1rem 0;
     }
 
     .hero-map {

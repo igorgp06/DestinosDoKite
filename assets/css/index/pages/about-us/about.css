@@ -38,9 +38,17 @@
 }
 
 @keyframes windLine {
-    0% { background-position: -100% 0; }
-    50% { background-position: 100% 0; }
-    100% { background-position: 200% 0; }
+    0% {
+        background-position: -100% 0;
+    }
+
+    50% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: 200% 0;
+    }
 }
 
 .about .page-subtitle {
@@ -95,7 +103,7 @@
     font-weight: 700;
     color: black;
     text-align: center;
-    font-family: var(--Destaque);
+    font-family: var(--font-1);
 }
 
 .about-card-group .card-text {
@@ -103,7 +111,7 @@
     font-weight: 450;
     color: black;
     text-align: center;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
 }
 
 .about-description {
@@ -111,7 +119,7 @@
     font-weight: 450;
     color: black;
     text-align: center;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
 }
 
 .about-us-buttons {
@@ -142,7 +150,7 @@
 .about-us-buttons button a {
     text-decoration: none;
     color: white;
-    font-family: var(--Destaque);
+    font-family: var(--font-1);
 }
 
 @media (max-width: 767px) {

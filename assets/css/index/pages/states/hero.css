@@ -32,7 +32,7 @@
     margin: 2rem;
     color: black;
     font-size: 1.2rem;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -44,7 +44,7 @@
     color: black;
     font-size: 1.2rem;
     font-weight: 500;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
 }
 
 .container-select {
@@ -67,7 +67,7 @@
     border-radius: 0.5rem;
     background-color: var(--Blue-2);
     width: 75%;
-    font-family: var(--Padrao); 
+    font-family: var(--font-1);
     text-align: center;
     align-items: center;
     justify-content: center;
@@ -84,7 +84,7 @@
     color: black;
     font-size: 1.1rem;
     font-weight: 500;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
     background-color: var(--Blue-1);
 }
 
@@ -147,13 +147,13 @@
 .states-card-group .card-title {
     font-size: 1.4rem;
     font-weight: 600;
-    font-family: var(--Destaque);
+    font-family: var(--font-1);
 }
 
 .states-card-group .card-text {
     font-size: 1.1rem;
     font-weight: 475;
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
 }
 
 .states-card-group .states-card-btn {
@@ -162,7 +162,7 @@
     font-weight: 500;
     color: var(--Blue-1);
     background-color: var(--Blue-4);
-    font-family: var(--Padrao);
+    font-family: var(--font-1);
     text-decoration: none;
     text-align: bottom;
     align-items: bottom;
@@ -184,7 +184,7 @@
         margin: 1rem;
         font-size: 1.2rem;
     }
-    
+
     .container-select {
         padding: 1.5rem;
         margin: 1rem;
@@ -244,12 +244,12 @@
         margin: 0.5rem;
         font-size: 1.2rem;
     }
-    
+
     .container-select {
         padding: 1.5rem;
         margin: 0.5rem;
     }
-    
+
     .states-card-group .card {
         max-width: 400px;
         height: 300px;
