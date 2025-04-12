@@ -27,10 +27,16 @@
     transition: all 0.4s ease-in-out;
 }
 
+.hero-footer .footer-creator {
+    border-radius: 0.5rem;
+    padding: 0.1rem;
+    transition: all 0.4s ease-in-out;
+} 
+
 .hero-footer .footer-creator:hover {
     color: var(--Blue-1);
+    background-color: var(--Blue-5);
     transform: scale(1.1);
-    transition: all 0.4s ease-in-out;
 } 
 
 @media (max-width: 575px) {

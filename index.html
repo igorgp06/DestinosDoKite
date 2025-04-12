@@ -23,10 +23,11 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
-    <!-- escondendo o scroll do eixo X -->
+    <!-- escondendo o scroll do eixo X e definindo a fonte -->
     <style>
         body {
             overflow-x: hidden;
+            font-family: var(--font-1);
         }
     </style>
 </head>
@@ -116,18 +117,19 @@
                     dos picos mais irados, informações sobre as melhores condições de vento, e recomendações de
                     escolas que vão te ajudar a aprender ou melhorar no esporte.
                 </p>
+            <div class="row align-items-center text-center">
                 <div class="col-12 col-md-12 col-lg-6 hero-text">
                     <h2 class="page-subtitle">Clique e encontre no mapa seu spot de velejo:</h2>
-                    <div class="welcome-buttons">
-                        <a href="assets/html/pages/states.html">
+                    <div class="col-12 col-md-12 col-lg-12 welcome-buttons">
+                        <a href="assets/html/pages/states.html" class="welcome-button" title="Estados do Brasil">
                             <i class="bi bi-geo-alt"></i>
                             Estados do Brasil
                         </a>
-                        <a href="assets/html/pages/about-us.html">
-                            <i class="custom-icon-kiteguy"></i>
-                            Quem Somos
+                        <a href="assets/html/pages/about-us.html" class="welcome-button">
+                            <i class="bi bi-question-circle"></i>
+                            Quem Nós Somos
                         </a>
-                        <a href="#">
+                        <a href="#" class="welcome-button">
                             <i class="bi bi-plus-circle"></i>
                             Cadastre seu Spot
                         </a>

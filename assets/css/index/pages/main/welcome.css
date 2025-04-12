@@ -29,7 +29,6 @@
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--Blue-5);
-    font-family: var(--font-1);
     margin: 0;
 }
 
@@ -49,42 +48,43 @@
 }
 
 .welcome-buttons {
-    margin: 1rem auto;
     display: flex;
+    align-items: stretch;
+    margin: 1rem auto;
     align-items: center;
     justify-content: center;
     gap: 1rem;
 }
 
-.welcome-buttons i {
-    font-size: 1.5rem;
-    color: var(--Blue-1);
-}
-
-.welcome-buttons .custom-icon-kiteguy {
-    display: inline-block;
-    width: 24px;
-    height: 24px;
-    background-image: url('../../../../static/images/global/kitesurf.png');
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.welcome-buttons a {
-    text-decoration: none;
+.welcome-buttons .welcome-button {
+    flex: 1;
+    max-width: 125px;
+    max-height: 125px;
+    text-align: center;
     color: white;
     padding: 0.6rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    border: none;
-    border-radius: 1.8rem;
+    font-weight: 550;
     background-color: var(--Blue-3);
     color: white;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+    border-radius: 55rem;
 }
 
-.welcome-buttons a:hover {
+.welcome-buttons a {
+    font-size: 1rem;
+    font-weight: 650;
+    font-family: var(--font-1);
+}
+
+.welcome-buttons i {
+    font-size: 1.5rem;
+    color: var(--Blue-1);
+    display: block;
+    text-align: center;
+}
+
+.welcome-buttons .welcome-button:hover {
     background-color: var(--Blue-4);
     transform: scale(1.05);
 }
@@ -252,13 +252,6 @@
 }
 
 @media (max-width: 991px) {
-    .welcome {
-        background-image: url('../../../../static/svgs/index/hero/blob-haikei-hero-mobile.svg');
-        background-size: cover;
-        background-position: top;
-        background-repeat: no-repeat;
-    }
-
     .welcome .page-title {
         font-size: 2.5rem;
     }
