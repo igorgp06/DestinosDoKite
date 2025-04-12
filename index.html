@@ -23,6 +23,9 @@
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
 
+    <!-- aos -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- escondendo o scroll do eixo X e definindo a fonte -->
     <style>
         body {
@@ -83,13 +86,16 @@
                 <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img src="assets/static/images/index/hero/hero-carousel-1.webp" class="d-block w-100 img-fluid" alt="...">
+                            <img src="assets/static/images/index/hero/hero-carousel-1.webp"
+                                class="d-block w-100 img-fluid" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/static/images/index/hero/hero-carousel-2.webp" class="d-block w-100 img-fluid" alt="...">
+                            <img src="assets/static/images/index/hero/hero-carousel-2.webp"
+                                class="d-block w-100 img-fluid" alt="...">
                         </div>
                         <div class="carousel-item">
-                            <img src="assets/static/images/index/hero/hero-carousel-3.webp" class="d-block w-100 img-fluid" alt="...">
+                            <img src="assets/static/images/index/hero/hero-carousel-3.webp"
+                                class="d-block w-100 img-fluid" alt="...">
                         </div>
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
@@ -110,48 +116,89 @@
     <section class="welcome" id="welcome">
         <div class="container">
             <div class="row align-items-center text-center">
-                <h1 class="page-title">Bem-vindo ao Guia <span class="destaque"><br>Destinos do Kite!</br></span></h1>
-                <p class="welcome-description">
+                <h1 class="page-title" data-aos="fade-up" data-aos-duration="400">BEM VINDO AO GUIA <br> DESTINOS DO
+                    KITE</h1>
+                <p class="welcome-description" data-aos="fade-up" data-aos-duration="600">
                     Aqui você vai encontrar os melhores spots de velejo e as escolas de kitesurf mais incríveis
                     espalhadas pelo Brasil! Nosso objetivo é facilitar sua jornada no mundo do kite, trazendo dicas
                     dos picos mais irados, informações sobre as melhores condições de vento, e recomendações de
                     escolas que vão te ajudar a aprender ou melhorar no esporte.
                 </p>
-            <div class="row align-items-center text-center">
-                <div class="col-12 col-md-12 col-lg-6 hero-text">
-                    <h2 class="page-subtitle">Clique e encontre no mapa seu spot de velejo:</h2>
-                    <div class="col-12 col-md-12 col-lg-12 welcome-buttons">
-                        <a href="assets/html/pages/states.html" class="welcome-button" title="Estados do Brasil">
-                            <i class="bi bi-geo-alt"></i>
-                            Estados do Brasil
-                        </a>
-                        <a href="assets/html/pages/about-us.html" class="welcome-button">
-                            <i class="bi bi-question-circle"></i>
-                            Quem Nós Somos
-                        </a>
-                        <a href="#" class="welcome-button">
-                            <i class="bi bi-plus-circle"></i>
-                            Cadastre seu Spot
-                        </a>
+                <div class="row align-items-center text-center">
+                    <div class="col-12 col-md-12 col-lg-6 hero-text">
+                        <h2 class="page-subtitle" data-aos="fade-right" data-aos-duration="800">Clique e encontre no
+                            mapa seu spot de velejo:</h2>
+                        <div class="col-12 welcome-buttons">
+                            <a href="assets/html/pages/states.html" class="welcome-button" title="Estados do Brasil"
+                                data-aos="fade-up" data-aos-duration="1000">
+                                <i class="bi bi-geo-alt"></i>
+                                Estados do Brasil
+                            </a>
+                            <a href="assets/html/pages/about-us.html" class="welcome-button" title="Quem somos nós?"
+                                data-aos="fade-up" data-aos-duration="1200">
+                                <i class="bi bi-question-circle"></i>
+                                Quem Nós Somos
+                            </a>
+                            <a href="#" class="welcome-button" title="Cadastre seu Spot" data-aos="fade-up"
+                                data-aos-duration="1400">
+                                <i class="bi bi-plus-circle"></i>
+                                Cadastre seu Spot
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-12 col-lg-6 hero-map">
-                    <div class="map-container">
-                        <div id="map">
-                            <div class="map-info-buttons" id="map-info-buttons">
-                                <span title="Informações sobre o mapa" class="open-info"><i
-                                        class="bi bi-question-lg"></i></span>
-                                <span title="Fechar informações" class="close-info"><i class="bi bi-x-lg"></i></span>
-                            </div>
-                            <div class="instruction-menu" id="instruction-menu">
-                                <h3>Informações sobre o mapa</h3>
-                                <p>1. Clique sobre algum marcador presente no mapa para acessar as informações das
-                                    escolas de kitesurf presentes naquele estado.</p>
-                                <p>2. Clique no X para fechar este menu.</p>
-                                <span>Estados onde não foram listadas nenhuma escola não possuem um marcador.</span>
+                    <div class="col-12 col-md-12 col-lg-6 hero-map" data-aos="fade-left" data-aos-duration="800">
+                        <div class="map-container">
+                            <div id="map">
+                                <div class="map-info-buttons" id="map-info-buttons">
+                                    <span title="Informações sobre o mapa" class="open-info"><i
+                                            class="bi bi-question-lg"></i></span>
+                                    <span title="Fechar informações" class="close-info"><i
+                                            class="bi bi-x-lg"></i></span>
+                                </div>
+                                <div class="instruction-menu" id="instruction-menu">
+                                    <h3>Informações sobre o mapa</h3>
+                                    <p>1. Clique sobre algum marcador presente no mapa para acessar as informações das
+                                        escolas de kitesurf presentes naquele estado.</p>
+                                    <p>2. Clique no X para fechar este menu.</p>
+                                    <span>Estados onde não foram listadas nenhuma escola não possuem um marcador.</span>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+    </section>
+
+    <section class="explore" id="explore">
+        <div class="container">
+            <div class="row align-items-center text-center">
+                <div class="col-12">
+                    <p class="explore-description">Seja você um iniciante buscando o lugar perfeito para começar, ou um
+                        veterano atrás de novas
+                        aventuras, aqui temos tudo o que você precisa para planejar a sua próxima viagem de kite!
+                        Explore os
+                        destinos, descubra as melhores opções de infraestrutura e conecte-se com a comunidade do kite.
+                        Vamos
+                        juntos nessa jornada para os melhores ventos e ondas do Brasil!
+                    </p>
+                </div>
+                <div class="row align-items-center text-center explore-cards-container">
+                    <a class="ccol-12 col-md-4 col-lg-3 explore-card-container explore-card-container-1"
+                        href="https://destinosdokite.com.br/index.html" target="_blank" rel="external">
+                        <div class="explore-card explore-card-1"></div>
+                        <div class="explore-card-text">
+                            <h3>Destinos do Kite</h3>
+                            <p>Aqui você encontra as melhores escolas de kitesurf espalhadas pelo Brasil</p>
+                        </div>
+                    </a>
+                    <a class="col-12 col-md-4 col-lg-3 explore-card-container explore-card-container-2" href="#"
+                        target="_blank" rel="external">
+                        <div class="explore-card explore-card-2"></div>
+                        <div class="explore-card-text">
+                            <h3>Igor Gonçalves | DEV</h3>
+                            <p>Desenvolvedor de websites e sistemas modernos e eficientes</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -185,11 +232,10 @@
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
 
-    <!-- aos -->
+    <!-- aos js -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({
-            duration: 1000,
             once: true,
         });
     </script>

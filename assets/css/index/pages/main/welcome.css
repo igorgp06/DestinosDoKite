@@ -21,10 +21,6 @@
     padding: 0;
 }
 
-.welcome .page-title .destaque {
-    text-decoration: underline;
-}
-
 .welcome .page-subtitle {
     font-size: 1.6rem;
     font-weight: 700;
@@ -67,8 +63,8 @@
     background-color: var(--Blue-3);
     color: white;
     cursor: pointer;
-    transition: all 0.4s ease-in-out;
     border-radius: 55rem;
+    transition: all 0.4s ease-in-out;
 }
 
 .welcome-buttons a {
@@ -261,13 +257,23 @@
         margin: 0;
     }
 
-    .welcome-buttons {
-        margin: 1rem 0 2rem 0;
+    .welcome .page-subtitle {
+        margin: 1.3rem 0;
     }
 
-    .welcome-buttons button {
-        padding: 0.5rem;
+    .welcome-buttons {
+        margin: 1rem 0;
+    }
+
+    .welcome-buttons .welcome-button {
+        max-width: 100px;
+        max-height: 100px;
+    }
+    .welcome-buttons a {
         font-size: 0.9rem;
+    }
+    .welcome-buttons i {
+        font-size: 1.2rem;
     }
 
     .hero-map {
@@ -388,5 +394,27 @@
     .welcome .welcome-description {
         font-size: 0.9rem;
         font-weight: 500;
+    }
+
+    .welcome .page-subtitle {
+        font-size: 1.4rem;
+        margin: 0.5rem 0;
+    }
+
+    .welcome-buttons {
+        margin: 1rem 0;
+    }
+
+    .welcome-buttons .welcome-button {
+        max-width: 80px;
+        max-height: 80px;
+    }
+
+    .welcome-buttons a {
+        font-size: 0.6rem;
+    }
+
+    .welcome-buttons i {
+        font-size: 0.8rem;
     }
 }

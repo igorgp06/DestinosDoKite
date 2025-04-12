@@ -24,13 +24,13 @@
 }
 
 .hero-carousel .carousel .carousel-item {
-    height: 60vh;
+    height: 70vh;
 }
 
 .hero-carousel .carousel .carousel-item img {
     width: 100%;
     height: auto;
-    max-height: 60vh;
+    max-height: 70vh;
     object-fit: cover;
 }
 
@@ -81,6 +81,21 @@
 
 @media (max-width: 575px) {
     .hero-carousel {
+        min-height: 25vh;
+        max-height: 25vh;
+    }
+
+    .hero-carousel .carousel .carousel-item {
+        height: 25vh;
+    }
+
+    .hero-carousel .carousel .carousel-item img {
+        max-height: 25vh;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-carousel {
         min-height: 20vh;
         max-height: 20vh;
     }
@@ -94,7 +109,7 @@
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 360px) {
     .hero-carousel {
         min-height: 15vh;
         max-height: 15vh;
@@ -108,8 +123,7 @@
         max-height: 15vh;
     }
 }
-
-@media (max-width: 360px) {
+@media (max-width: 320px) {
     .hero-carousel {
         min-height: 10vh;
         max-height: 10vh;
@@ -120,20 +134,6 @@
     }
 
     .hero-carousel .carousel .carousel-item img {
-        max-height: 10vh;
-    }
-}
-@media (max-width: 320px) {
-    .hero-carousel {
-        min-height: 5vh;
-        max-height: 5vh;
-    }
-
-    .hero-carousel .carousel .carousel-item {
-        height: 5vh;
-    }
-
-    .hero-carousel .carousel .carousel-item img {
-        max-height: 5vh;
+        max-height:10vh;
     }
 }

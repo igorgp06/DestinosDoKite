@@ -7,7 +7,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--Blue-1);
+    background-color: var(--Black);
 }
 
 .hero-footer .hero-footer-text {
@@ -18,11 +18,11 @@
 .hero-footer .hero-footer-text li {
     font-size: 0.9rem;
     font-weight: 500;
-    color: rgba(0, 0, 0, 0.550);
+    color: rgba(255, 255, 255, 0.55);
 }
 
 .hero-footer .hero-footer-text li a {
-    color: rgba(0, 0, 0, 0.550);
+    color: rgba(255, 255, 255, 0.55);
     text-decoration: none;
     transition: all 0.4s ease-in-out;
 }
@@ -34,8 +34,8 @@
 } 
 
 .hero-footer .footer-creator:hover {
-    color: var(--Blue-1);
-    background-color: var(--Blue-5);
+    color: var(--Black);
+    background-color: var(--Blue-1);
     transform: scale(1.1);
 } 
 
