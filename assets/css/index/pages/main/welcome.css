@@ -6,7 +6,7 @@
     margin: 0 auto;
     padding: 0;
     height: auto;
-    min-height: 90vh;
+    min-height: 100vh;
     background-color: var(--Blue-1);
     display: flex;
     align-items: center;
