@@ -37,11 +37,11 @@ Problemas/Bugs encontrados ao decorrer do desenvolvimento do projeto serão list
 ## Licença
 
 Este código está sob uma licença personalizada que permite apenas a **visualização** do código.  
-Para mais detalhes, consulte o arquivo [`LICENSE`](./LICENSE) ou entre em contato pelo e-mail: contateme.igorgp@gmail.com.
+Para mais detalhes, consulte o arquivo [`LICENSE`](./LICENSE) ou entre em contato pelo e-mail: ouvidoria@igdeveloper.com.br
 
 ## Contato
 
-Para dúvidas, sugestões ou qualquer outra questão, envie um e-mail para: contateme.igorgp@gmail.com.  
+Para dúvidas, sugestões ou qualquer outra questão, envie um e-mail para: ouvidoria@igdeveloper.com.br 
 
 ## Desenvolvedor Responsável
 
