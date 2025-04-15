@@ -40,7 +40,6 @@
 .welcome-description {
     font-size: 1.2rem;
     color: black;
-    font-family: var(--font-1);
 }
 
 .welcome-buttons {
@@ -70,7 +69,6 @@
 .welcome-buttons a {
     font-size: 1rem;
     font-weight: 650;
-    font-family: var(--font-1);
 }
 
 .welcome-buttons i {
@@ -169,7 +167,6 @@
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--Blue-1);
-    font-family: var(--font-1);
     margin-top: 0;
 }
 
@@ -177,7 +174,7 @@
     color: var(--Blue-1);
     font-size: 0.9rem;
     font-weight: 545;
-    font-family: var(--font-1);
+
     margin: 5px 0;
 }
 
@@ -269,9 +266,11 @@
         max-width: 100px;
         max-height: 100px;
     }
+
     .welcome-buttons a {
         font-size: 0.9rem;
     }
+
     .welcome-buttons i {
         font-size: 1.2rem;
     }

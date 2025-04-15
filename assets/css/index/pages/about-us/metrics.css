@@ -47,7 +47,7 @@
     font-size: 1.2rem;
     font-weight: 500;
     color: black;
-    font-family: var(--font-1);
+
 }
 
 .chart-container {
@@ -63,10 +63,10 @@
     font-weight: 450;
     padding: 1rem;
     background: var(--Blue-1);
-    font-family: var(--font-1);
+
 }
 
 .custom-tooltip strong {
     font-size: 1.3rem;
-    font-family: var(--font-1);
+
 }

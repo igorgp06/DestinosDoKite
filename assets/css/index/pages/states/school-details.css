@@ -107,14 +107,14 @@
 .school-cards .card-title {
     font-size: 1.4rem;
     font-weight: 600;
-    font-family: var(--font-1);
+
     margin-bottom: 0.5rem;
 }
 
 .school-cards .card-text {
     font-size: 1.1rem;
     font-weight: 475;
-    font-family: var(--font-1);
+
     margin-top: 0.5rem;
     padding: 0.5rem;
     display: flex;
@@ -126,7 +126,7 @@
 .school-cards .card-link {
     font-size: 1.1rem;
     font-weight: 475;
-    font-family: var(--font-1);
+
     color: var(--Blue-4);
     display: flex;
     align-items: center;
@@ -153,14 +153,14 @@ i:hover {
 .school-cards .school-card-number {
     font-size: 1.1rem;
     font-weight: 450;
-    font-family: var(--font-1);
+
     color: black;
 }
 
 .school-cards .school-card-number span {
     font-size: 1.1rem;
     font-weight: 450;
-    font-family: var(--font-1);
+
     color: var(--Blue-5);
 }
 

@@ -30,7 +30,7 @@
 
 .states-result .states-result-description {
     font-size: 2rem;
-    font-family: var(--font-1);
+
 }
 
 .states-map-container {
@@ -73,7 +73,7 @@
 .states-map-container .leaflet-popup-content h3 {
     color: black;
     font-size: 1.2rem;
-    font-family: var(--font-1);
+
     text-transform: uppercase;
     margin: 0;
     padding: 0;
@@ -82,7 +82,7 @@
 .states-map-container .leaflet-popup-content p {
     color: black;
     font-size: 1rem;
-    font-family: var(--font-1);
+
     margin: 0;
     padding: 0;
 }
@@ -113,7 +113,7 @@
     color: var(--Blue-4);
     font-size: 2.2rem;
     font-weight: 650;
-    font-family: var(--font-1);
+
     text-transform: uppercase;
 }
 
@@ -150,7 +150,7 @@
     color: var(--Blue-1);
     font-weight: 650;
     font-size: 1.6rem;
-    font-family: var(--font-1);
+
     text-transform: uppercase;
     margin: 0.4rem 0 0.8rem 0;
 }
@@ -159,7 +159,7 @@
     color: var(--Blue-1);
     font-weight: 600;
     font-size: 1.4rem;
-    font-family: var(--font-1);
+
     margin-bottom: 0.4rem;
     padding: 0;
 }
@@ -168,7 +168,7 @@
     color: var(--Blue-1);
     font-weight: 550;
     font-size: 1.2rem;
-    font-family: var(--font-1);
+
     margin-bottom: 0.4rem;
     padding: 0;
 }
@@ -177,7 +177,7 @@
     color: var(--Blue-1);
     font-weight: 500;
     font-size: 1.2rem;
-    font-family: var(--font-1);
+
     margin-bottom: 0.4rem;
     padding: 0;
 }
@@ -190,7 +190,7 @@
     background-color: var(--Blue-3);
     font-size: 1.1rem;
     font-weight: 500;
-    font-family: var(--font-1);
+
     border: none;
     text-decoration: none;
     text-align: bottom;

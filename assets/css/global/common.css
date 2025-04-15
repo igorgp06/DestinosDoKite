@@ -6,7 +6,7 @@
     font-size: 3.3rem;
     font-weight: 700;
     letter-spacing: 2px;
-    font-family: var(--font-1);
+
     color: var(--Blue-5);
 }
 
@@ -14,6 +14,6 @@
     font-size: 2.2rem;
     font-weight: 600;
     letter-spacing: 1px;
-    font-family: var(--font-1);
+
     color: var(--Blue-1);
 }
