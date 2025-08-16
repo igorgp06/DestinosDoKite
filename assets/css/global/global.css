@@ -1,9 +1,0 @@
-@charset "UTF-8";
-
-/* global imports */
-
-@import url('normalize.css');
-@import url('variables.css');
-@import url('common.css');
-@import url('header.css');
-@import url('scrollbar.css');
