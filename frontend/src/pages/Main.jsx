@@ -1,5 +1,5 @@
+import { Outlet } from 'react-router-dom';
 import { Header } from '../components/Header';
-import { HomePage } from './public/HomePage';
 
 export const Main = () => {
     return (
@@ -7,8 +7,10 @@ export const Main = () => {
             <Header />
 
             <main>
-                <HomePage />
+                <Outlet />
             </main>
+
+            
         </div>
     )
 }

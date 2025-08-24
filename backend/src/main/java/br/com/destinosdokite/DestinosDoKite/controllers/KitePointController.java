@@ -18,12 +18,7 @@ public class KitePointController {
         this.kitePointService = kitePointService;
     }
 
-    @GetMapping
-    public List<KitePointDTO> getAllKitePoints(@RequestParam(required = false) String state) {
-        return kitePointService.findAll(state).stream()
-                .map(KitePointDTO::new)
-                .collect(Collectors.toList());
-    }
+
 
     @GetMapping("{id}")
     public ResponseEntity<KitePointDTO> getKitePointById(@PathVariable Long id) {

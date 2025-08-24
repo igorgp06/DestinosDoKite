@@ -2,63 +2,80 @@
 @import "tailwindcss";
 
 @theme {
+  --color-blue-1: hsl(var(--blue-1));
+  --color-blue-2: hsl(var(--blue-2));
+  --color-blue-3: hsl(var(--blue-3));
+  --color-blue-4: hsl(var(--blue-4));
+  --color-blue-5: hsl(var(--blue-5));
+  --color-black: hsl(var(--black));
 
-  --color-border: var(--blue-2)
-  --color-bg: var(--blue-1);
+  --color-border: hsl(var(--border));
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
 
-  --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
 }
 
 @layer base {
   :root {
-    --blue-1: #f2f2f2;
-    --blue-2: #bfc7d9;
-    --blue-3: #797f8d;
-    --blue-4: #6c778c;
-    --blue-5: #4e5873;
-    --black: #2222;
+    --blue-1: 0 0% 95%;
+    --blue-2: 225 20% 80%;
+    --blue-3: 225 7% 52%;
+    --blue-4: 222 13% 48%;
+    --blue-5: 222 20% 38%;
+    --black: 0 0% 13%;
 
-    --primary: #000000;
-    --primary-foreground: #ffffff;
+    --background: var(--black);
+    --foreground: var(--blue-1);
+
+    --primary: var(--blue-5);
+    --primary-foreground: var(--blue-1);
+
+    --border: var(--blue-3);
   }
 
-  * {
-    @apply box-border;
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
   }
-
-  html {
-    @apply scroll-smooth;
-  }
-
-/*   body {
-    @apply color-bg text-blue-3 font-sans;
-  } */
 }
 
 @utility container {
-    margin-inline: auto;
-    padding-inline: 2rem;
+  margin-inline: auto;
+  padding-inline: 2rem;
 
-    @media (width >=640px) {
-        max-width: 640px;
-    }
+  @media (width >=640px) {
+    max-width: 640px;
+  }
 
-    @media (width >=768px) {
-        max-width: 768px;
-    }
+  @media (width >=768px) {
+    max-width: 768px;
+  }
 
-    @media (width >=1024px) {
-        max-width: 1024px;
-    }
+  @media (width >=1024px) {
+    max-width: 1024px;
+  }
 
-    @media (width >=1280px) {
-        max-width: 1280px;
-    }
+  @media (width >=1280px) {
+    max-width: 1280px;
+  }
 
-    @media (width >=1400px) {
-        max-width: 1400px;
-    }
+  @media (width >=1400px) {
+    max-width: 1400px;
+  }
+}
+
+@utility text-glow {
+  @apply relative;
+  text-shadow: 0 0 15px var(--color-primary);
+  background: transparent;
+  background-color: transparent;
+}
+
+@utility buttons {
+  @apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300;
+  box-shadow: 0 4px 14px 0 var(--color-primary);
 }
 
 #root {

@@ -7,5 +7,5 @@ import java.util.List;
 
 public interface KitePointRepository extends JpaRepository<KitePoint, Long> {
 
-    List<KitePoint> findByState(String state);
+
 }

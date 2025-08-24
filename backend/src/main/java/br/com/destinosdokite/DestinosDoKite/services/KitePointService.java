@@ -16,12 +16,7 @@ public class KitePointService {
         this.kitePointRepository = kitePointRepository;
     }
 
-    public List<KitePoint> findAll(String state) {
-        if (state != null & !state.trim().isEmpty()) {
-            return kitePointRepository.findByState(state.toUpperCase());
-        }
-        return kitePointRepository.findAll();
-    }
+
 
     public Optional<KitePoint> findById(Long id) {
         return kitePointRepository.findById(id);
