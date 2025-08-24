@@ -1,11 +1,12 @@
 import { cn } from "../lib/utils";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 
 const menuItems = [
-    { name: "Início", href: "" }, // TODO inicio vai contar o sobre junto dele
-    { name: "Destinos", href: "" },
-    { name: "Contato", href: "" }, // TODO vai contar as percerias junto dele
+    { name: "Início", to: "/" }, // TODO inicio vai contar o sobre junto dele
+    { name: "Destinos", to: "/destinos" }, // sem alteração da versão inicial
+    { name: "Contato", to: "/contato" }, // TODO vai conter as percerias junto dele
 ]
 
 export const Header = () => {
@@ -38,37 +39,34 @@ export const Header = () => {
         <>
             <nav
                 className={cn(
-                    "fixes w-full top-0 left-0 z-40 transition-all duration-300",
+                    "fixe w-full top-0 left-0 z-40 transition-all duration-300",
                     isScrolled ? "py-3 color-background/80 backdrop-blur-md shadow-md" : "py-5"
                 )}
             >
 
                 <div className="container flex items-center justify-between">
-                    <a
-                        className={cn(
-                            "text-xl font-bold color-primary flex items-center transition-all duration-300",
-                            "hover:opacity-80 hover:text-primary-foreground hover:text-glow"
-                        )}
-                        href="https://www.destinosdokite.com.br"
+                    <Link
+                        to="/"
+                        className={cn("text-xl font-bold color-primary flex items-center transition-all", "duration-300 hover:opacity-80 hover:text-primary-foreground hover:text-glow")}
                         onClick={() => setIsMenuOpen(false)}
                     >
                         <span className="relative z-10 text-2xl font-bold">
                             Destinos do Kite
                         </span>
-                    </a>
+                    </Link>
 
                     <div className="hidden md:flex space-x-8">
                         {menuItems.map((item, key) => (
-                            <a
+                            <NavLink
                                 key={key}
-                                href={item.href}
+                                to={item.to}
                                 className={cn(
                                     "text-lg font-medium transition-all duration-300",
                                     "hover:opacity-80 hover:text-primary-foreground hover:text-glow"
                                 )}
                             >
                                 {item.name}
-                            </a>
+                            </NavLink>
                         ))}
                     </div>
                 </div>
@@ -94,17 +92,21 @@ export const Header = () => {
 
                 <div className="flex flex-col space-y-8 text-xl text-foreground w-full h-full justify-center">
                     {menuItems.map((item, key) => (
-                        <a
+                        <NavLink
                             key={key}
-                            href={item.href}
-                            className={cn(
-                                "text-center font-medium transition-all duration-300",
-                                "hover:opacity-80 hover:text-primary-foreground hover:text-glow"
-                            )}
+                            to={item.to}
+                            className={({ isActive }) =>
+                                cn(
+                                    "text-center font-medium transition-all duration-300",
+                                    isActive
+                                        ? "text-primary-foreground underline"
+                                        : "hover:opacity-80 hover:text-primary-foreground hover:text-glow"
+                                )
+                            }
                             onClick={() => setIsMenuOpen(false)}
                         >
                             {item.name}
-                        </a>
+                        </NavLink>
                     ))}
                 </div>
             </div>
