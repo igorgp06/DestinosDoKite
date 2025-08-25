@@ -2,6 +2,10 @@
 
 Um web site desenvolvido para ajudar a guiar e conhecer as escolas de kite por todo o Brasil. Conheça as escolas, suas informações, como entrar e contato e muito mais através deste site!
 
+
+> [!IMPORTANT]
+> O site ainda está hospedado na versão **antiga**, a nova versão estará disponivel para a visualização pública apenas quando for concluída!
+
 ## Controle Versional (GIT)
 
 O projeto segue o seguinte padrão de sufixos:
