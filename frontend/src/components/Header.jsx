@@ -39,7 +39,7 @@ export const Header = () => {
         <>
             <nav
                 className={cn(
-                    "fixe w-full top-0 left-0 z-40 transition-all duration-300",
+                    "fixed w-full top-0 left-0 z-40 transition-all duration-300",
                     isScrolled ? "py-3 color-background/80 backdrop-blur-md shadow-md" : "py-5"
                 )}
             >
