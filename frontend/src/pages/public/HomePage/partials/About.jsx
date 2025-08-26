@@ -2,7 +2,7 @@ import { cn } from "../../../../lib/utils"
 
 export const About = () => {
     return (
-        <div className="relative min-h-[80vh] flex flex-col align-center justify-center px-4" id="about">
+        <div className="relative min-h-[80vh] flex flex-col align-center justify-center px-4 bg-primary" id="about">
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <h2 className="text-3xl md:text-4x1 font-bold mb-12 text-center text-primary-foreground">
                     Quem Somos

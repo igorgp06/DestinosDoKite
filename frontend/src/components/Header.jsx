@@ -74,7 +74,7 @@ export const Header = () => {
 
             <button
                 onClick={() => setIsMenuOpen((prev) => !prev)}
-                className="md:hidden fixed top-5 right-5 z-50 p-2 rounded-md color-background/90 backdrop-blur-md shadow-md hover:opacity-80 transition-all duration-300"
+                className="md:hidden fixed top-2 right-4 z-50 p-2 rounded-md color-background/90 backdrop-blur-md shadow-md hover:opacity-80 transition-all duration-300"
                 aria-label={isMenuOpen ? "Fechar menu" : "Abrir menu"}
             >
                 {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
