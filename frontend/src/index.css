@@ -59,6 +59,10 @@
     --card-foreground: var(--blue-1);
   }
 
+  html {
+    @apply scroll-smooth;
+  }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -103,7 +107,7 @@
 }
 
 @utility card-hover {
-  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg p-2;
+  @apply transition-all duration-300 hover:scale-[1.02] hover:shadow-lg p-2 hover:border hover:rounded-lg bg-card text-card-foreground;
 }
 
 #root {

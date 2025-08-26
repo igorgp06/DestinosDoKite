@@ -1,8 +1,8 @@
-import { cn } from "../../../lib/utils"
+import { cn } from "../../../../lib/utils"
 
 export const About = () => {
     return (
-        <section className="relative min-h-screen flex flex-col align-center justify-center px-4" id="about">
+        <div className="relative min-h-[80vh] flex flex-col align-center justify-center px-4" id="about">
             <div className="container max-w-4xl mx-auto text-center z-10">
                 <h2 className="text-3xl md:text-4x1 font-bold mb-12 text-center text-primary-foreground">
                     Quem Somos
@@ -13,9 +13,9 @@ export const About = () => {
                         <div className="flex item-center justify-center flex-col gap-2 border bg-card card-hover">
                             <div className="flex item-center justify-center">
                                 <img
-                                    src="/public/assets/static/imgs/pages/HomePage/homePage-card-2.webp"
-                                    alt=""
-                                    className="max-w-80 max-h-80 rounded-1xl"
+                                    src="/assets/static/imgs/pages/HomePage/homePage-card-2.webp"
+                                    alt="Foto do Arthur e da Ju"
+                                    className="max-w-80 max-h-80 object-cover hover:rounded-t-xl hover:scale-101 transition-all duration-300"
                                 />
                             </div>
                             <div className="text-center">
@@ -24,7 +24,6 @@ export const About = () => {
                                     Nós somos o Arthur e a Ju! Moramos em Imbituba - SC, perto da incrível Lagoa de Ibiraquera, e somos apaixonados por Kitesurf.
                                 </p>
                             </div>
-
                         </div>
                     </div>
 
@@ -32,9 +31,9 @@ export const About = () => {
                         <div className="flex item-center justify-center flex-col gap-2 border bg-card card-hover">
                             <div className="flex item-center justify-center">
                                 <img
-                                    src="/public/assets/static/imgs/pages/HomePage/homePage-card-1.webp"
-                                    alt=""
-                                    className="max-w-80 max-h-80 rounded-1xl"
+                                    src="/assets/static/imgs/pages/HomePage/homePage-card-1.webp"
+                                    alt="Foto de umas das aulas de kite"
+                                    className="max-w-80 max-h-80 object-cover hover:rounded-t-xl hover:scale-101 transition-all duration-300"
                                 />
                             </div>
                             <div className="text-center">
@@ -69,7 +68,6 @@ export const About = () => {
                     </div>
                 </div>
             </div>
-
-        </section>
+        </div>
     )
 }

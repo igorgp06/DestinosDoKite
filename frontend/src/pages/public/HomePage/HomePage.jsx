@@ -1,15 +1,20 @@
-import { Hero } from "./Hero";
-import { About } from "./About";
+import { Hero } from "./partials/Hero";
+import { About } from "./partials/About";
+import { More } from "./partials/More";
 
 export const HomePage = () => {
     return (
         <div className="flex flex-col">
-            <section id="hero" className="min-h-screen flex items-center justify-center bg-background">
+            <main id="hero" className="min-h-screen flex items-center justify-center bg-background">
                 <Hero />
-            </section>
+            </main>
 
             <section id="about" className="min-h-screen flex items-center justify-center bg-primary">
                 <About />
+            </section>
+
+            <section id="more" className="min-h-[75vh] sm:min-h-[80vh] flex items-center justify-center bg-primary">
+                <More />
             </section>
 
         </div>

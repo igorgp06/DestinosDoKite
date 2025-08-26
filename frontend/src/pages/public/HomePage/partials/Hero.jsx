@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 import { ArrowDown } from "lucide-react";
-import { cn } from "../../../lib/utils";
+import { cn } from "../../../../lib/utils";
 
 export const Hero = () => {
     return (
 
-        <main className="relative min-h-screen flex flex-col align-center justify-center px-4" id="home">
+        <div className="relative min-h-screen flex flex-col align-center justify-center px-4" id="home">
 
             <div className="container max-w-3xl mx-auto text-center z-10">
                 <div className="space-y-8 ">
@@ -48,8 +48,10 @@ export const Hero = () => {
 
             <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center text-primary-foreground opacity-70 animate-bounce">
                 <span className="text-sm text-primary-foreground mb-1">Veja Mais</span>
-                <ArrowDown className="h-5 w-5 text-primary" />
+                <a href="#about">
+                    <ArrowDown className="h-5 w-5 text-primary hover:scale-110 transition-transform duration-300" />
+                </a>
             </div>
-        </main>
+        </div>
     )
 } 
