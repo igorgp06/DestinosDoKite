@@ -4,7 +4,7 @@ Um web site desenvolvido para ajudar a guiar e conhecer as escolas de kite por t
 
 
 > [!IMPORTANT]
-> O site ainda está hospedado na versão **antiga**, a nova versão estará disponivel para a visualização pública apenas quando for concluída!
+> O site ainda está hospedado na versão **antiga**. A preview da nova versão pode ser encontrada neste [link](https://destinos-do-kite.vercel.app/). Tenha em mente que o projeto está em desenvolvimento, erros inesperados e bugs podem vim a ocorrer!
 
 ## Controle Versional (GIT)
 
