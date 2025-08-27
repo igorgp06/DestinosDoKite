@@ -56,8 +56,9 @@ export const About = () => {
                         </div>
 
                         <div className="space-y-6">
-                            <button className={cn("inline-block px-6 py-2 bg-primary text-primary-foreground font-semibold", "rounded-md shadow-md border border-primary-foreground",
-                                "hover:bg-background hover:text-glow transition-all duration-300")}
+                            <button className={cn("inline-block px-6 py-2 bg-background text-primary-foreground font-semibold", 
+                            "rounded-md shadow-md border border-primary-foreground",
+                                "hover:bg-primary hover:text-glow hover:scale-105 transition-all duration-300")}
                                 onClick={() => window.location.href = 'https://www.instagram.com/destinosdokite/'}
 
                             >
