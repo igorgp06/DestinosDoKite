@@ -3,13 +3,13 @@ export const More = () => {
     return (
         <div className="relative flex flex-col align-center justify-center px-4" id="more">
             <div className="container max-w-6xl mx-auto text-center z-10">
-                <h2 className="text-4xl md:text-4xl font-bold m-8 text-center text-primary-foreground">
+                <h2 className="text-3xl md:text-5xl font-bold m-8 text-center text-primary-foreground">
                     Mais Sobre Nós
                 </h2>
 
                 <div className="grid grid-cols-2 gap-12 items-center">
                     <div className="col-span-2 md:col-span-1">
-                        <h3 className="mt-2 text-3xl font-semibold flex items-center gap-2 justify-center">Nossa Ideia</h3>
+                        <h3 className="mt-2 text-2xl font-semibold flex items-center gap-2 justify-center">Nossa Ideia</h3>
                         <p className="text-1lg">
                             A ideia é criar um guia completo de kite que explore tanto os destinos mais conhecidos quanto os melhores e mais irados picos escondidos pelo Brasil.
                         </p>
@@ -20,7 +20,7 @@ export const More = () => {
                     </div>
 
                     <div className="col-span-2 md:col-span-1">
-                        <h3 className="mt-2 text-3xl font-semibold flex items-center gap-2 justify-center">Instrutores</h3>
+                        <h3 className="mt-2 text-2xl font-semibold flex items-center gap-2 justify-center">Instrutores</h3>
                         <p className="text-1lg color-primary-foreground/90">
                             Arthur, como instrutor de kitesurf, traz não só a experiência técnica de quem ensina e conhece os desafios do esporte, mas também dicas práticas para quem quer melhorar ou aprender a velejar. A Ju, com seu olhar de exploradora, ajuda a capturar a essência de cada lugar e a mostrar como cada destino tem algo único a oferecer, seja para quem busca uma aventura tranquila ou uma experiência intensa.
                         </p>

@@ -29,7 +29,8 @@ export const Hero = () => {
                 <div className="mt-10 opacity-1 animate-fade-in-delay-4 flex justify-center items-center gap-4 flex-wrap">
                     <Link
                         to="/destinos"
-                        className={cn("inline-block px-4 py-3 bg-primary text-primary-foreground font-semibold", "rounded-md shadow-md border border-primary-foreground",
+                        className={cn("inline-block px-4 py-3 bg-primary text-primary-foreground font-semibold", 
+                            "rounded-md shadow-md border border-primary-foreground",
                             "hover:bg-background hover:text-glow transition-all duration-300"
                         )}
                     >
