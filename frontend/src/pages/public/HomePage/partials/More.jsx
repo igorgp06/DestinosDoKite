@@ -27,7 +27,7 @@ export const More = () => {
                     </div>
                 </div>
 
-                <div className="mt-12 text-center text-primary-foreground/90">
+                <div className="mt-12 text-center text-primary-foreground/90 pb-4">
                     <div className="grid grid-cols-1 gap-8 items-center">
                         <div className="space-y-6 bg-card p-2 border border-border rounded-lg hover:shadow-md transition-all duration-300 hover:scale-[1.02] hover:backdrop-blur-2xl">
                             <p className="text-1lg color-primary-foreground/90">
