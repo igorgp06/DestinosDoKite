@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Escola de Kite PDR",
+        "kitepoint": "Escola de Kitesurf",
+        "location": "Imbituba",
+        "airport": "Aeroporto de Florianópolis",
+        "season": "Agosto a Outubro",
+        "lat": -27.59,
+        "lng": -48.55,
+        "state": "24",
+        "images": [
+            "/assets/static/imgs/schools/sc/001/2.webp",
+            "/assets/static/imgs/schools/sc/001/3.webp",
+            "/assets/static/imgs/schools/sc/001/4.webp"
+        ],
+        "cardText": "Esta é uma breve descrição da Escola Teste 1. Aqui você encontra tudo sobre kitesurf!",
+        "socialMedia": [
+            {
+                "platform": "instagram",
+                "link": "#"
+            },
+            {
+                "platform": "email",
+                "link": "#"
+            },
+            {
+                "platform": "number",
+                "number": "48 9 9999-9999"
+            }
+        ]
+    },
+    {
+        "name": "Escola Teste 2",
+        "kitepoint": "Kitepoint",
+        "location": "Rio de Janeiro",
+        "airport": "Aeroporto Santos Dumont",
+        "season": "Verão",
+        "description": "Escola Teste 2",
+        "lat": -22.9068,
+        "lng": -43.1729,
+        "state": "19",
+        "images": [
+            "../../static/images/schools/school-2-19/1.jpg",
+            "../../static/images/schools/school-2-19/2.jpg"
+        ],
+        "cardText": "Esta é uma breve descrição da Escola Teste 2. Venha aprender kitesurf conosco!",
+        "socialMedia": [
+            {
+                "platform": "instagram",
+                "link": "#"
+            },
+            {
+                "platform": "email",
+                "link": "#"
+            },
+            {
+                "platform": "number",
+                "number": "21 9 9999-9999"
+            }
+        ]
+    }
+]
