@@ -34,7 +34,7 @@ export const Hero = () => {
                                 "border-primary-foreground hover:bg-background hover:text-glow transition-all duration-300 w-full")}
                                 type="button"
                             >
-                                <a href="#filter">Filtrar</a>
+                                <a href="#filter" className="block w-full">Filtrar</a>
                             </button>
                         </div>
                     </div>
