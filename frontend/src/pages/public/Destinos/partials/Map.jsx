@@ -87,7 +87,7 @@ const Map = ({ escolas, estadoSelecionado }) => {
     return (
         <div
             ref={containerRef}
-            className="w-full h-[350px] md:h-[550px] border rounded-2xg shadow-lg"
+            className="w-[65vh] h-[350px] md:h-[400px] border rounded-2xg shadow-lg"
         />
     );
 };
