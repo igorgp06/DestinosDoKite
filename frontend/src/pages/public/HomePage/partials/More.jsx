@@ -14,7 +14,7 @@ export const More = () => {
                             A ideia é criar um guia completo de kite que explore tanto os destinos mais conhecidos quanto os melhores e mais irados picos escondidos pelo Brasil.
                         </p>
 
-                        <p className="text-1lg color-primary-foreground/90 mt-4">
+                        <p className="text-1lg color-primary-foreground/90 mt-4 bg-card p-2 border border-border rounded-lg hover:shadow-md transition-all duration-300 hover:scale-[1.02] hover:backdrop-blur-2xl">
                             Nosso projeto também é uma plataforma colaborativa. Estamos conectados com parceiros incríveis que compartilham da nossa visão de que o kitesurf é mais do que um esporte – é uma forma de vida, uma forma de se libertar, explorar e se conectar com o mundo. A cada destino que visitamos, trazemos informações detalhadas, imagens inspiradoras e experiências de quem já passou por lá, tudo para ajudar você a planejar sua próxima viagem de kite.
                         </p>
                     </div>

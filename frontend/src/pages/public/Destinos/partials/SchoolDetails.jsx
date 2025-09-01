@@ -1,6 +1,7 @@
 const SchoolDetails = ({ escola, onClose }) => (
-    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-        <div className="bg-primary p-6 rounded-lg shadow-lg w-full max-w-lg relative">
+    
+    <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-48">
+        <div className="bg-primary p-6 m-3 rounded-lg shadow-lg w-[95vh] max-w-lg relative">
 
             <button onClick={onClose} className="absolute top-2 right-2">X</button>
 
@@ -9,9 +10,9 @@ const SchoolDetails = ({ escola, onClose }) => (
             <p>{escola.airport}</p>
             <p>{escola.season}</p>
 
-            <div className="grid grid-cols-2 gap-2 mt-4">
+            <div className="grid grid-cols-2 gap-2 mt-2">
                 {escola.images?.map((img, i) => (
-                    <img key={i} src={img} alt={escola.name} className="rounded " />
+                    <img key={i} src={img} alt={escola.name} className="rounded border border-primary" />
                 ))}
             </div>
 

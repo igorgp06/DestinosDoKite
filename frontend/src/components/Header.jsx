@@ -4,8 +4,8 @@ import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 const menuItems = [
-    { name: "Início", to: "/" }, // TODO inicio vai contar o sobre junto dele
-    { name: "Destinos", to: "/destinos" }, // sem alteração da versão inicial
+    { name: "Início", to: "/" },
+    { name: "Destinos", to: "/destinos" },
     { name: "Contato", to: "/contato" }, // TODO vai conter as percerias junto dele
 ]
 
@@ -24,9 +24,9 @@ export const Header = () => {
 
     useEffect(() => {
         if (isMenuOpen) {
-            document.body.overflow = "hidden";
+            document.body.style.overflow = "hidden";
         } else {
-            document.body.overflow = "auto";
+            document.body.style.overflow = "auto";
         }
 
         return () => {
@@ -82,7 +82,7 @@ export const Header = () => {
 
             <div
                 className={cn(
-                    "fixed inset-0 bg-background/90 backdrop-blur-md z-49 flex felx-col",
+                    "fixed inset-0 bg-background/90 backdrop-blur-md z-49 flex flex-col",
                     "item-center justify-center transition-all duration-300 md:hidden",
                     isMenuOpen
                         ? "opacity-100 pointer-events-auto"
