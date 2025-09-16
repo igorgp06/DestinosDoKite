@@ -20,7 +20,7 @@ const Map = ({ escolas, estadoSelecionado }) => {
         });
 
         L.tileLayer("", {
-            
+
         }).addTo(map);
 
         mapRef.current = map;
@@ -84,10 +84,22 @@ const Map = ({ escolas, estadoSelecionado }) => {
         }
     }, [escolas]);
 
+    useEffect(() => {
+        const map = mapRef.current;
+        if (!map) return;
+
+        const handleResize = () => {
+            map.invalidateSize();
+        };
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     return (
         <div
             ref={containerRef}
-            className="w-[65vh] h-[350px] md:h-[400px] border rounded-2xg shadow-lg"
+            className="w-full h-[350px] md:w-[50vh] border rounded-2xl shadow-lg"
         />
     );
 };

@@ -33,16 +33,16 @@ export const Filter = ({ estadoSelecionado }) => {
     }
 
     return (
-        <div className="relative min-h-screen flex flex-col px-6 py-12">
-            <div className="container max-w-full px-6 mx-auto text-center items-center">
+        <div className="relative min-h-screen flex flex-col align-center justify-center px-4 pb-29 mt-8">
+            <div className="container max-w-6xl mx-auto text-center">
 
                 <div className="grid grid-cols-1 gap-8 items-center mb-8">
 
                     <div className="w-full max-w-6xl">
                         <h2 className="text-2xl font-bold mb-4">Escolas de Kitesurf</h2>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                            <div className="col-span-1">
+                        <div className="grid grid-cols-1 gap-12 items-center">
+                            <div className="col-span-1  md:w-[50%]">
                                 <Map escolas={escolas} estadoSelecionado={estadoSelecionado} />
                             </div>
                             <div className="col-span-1 space-y-6 w-full">
