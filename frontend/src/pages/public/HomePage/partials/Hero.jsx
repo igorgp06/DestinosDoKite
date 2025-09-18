@@ -9,7 +9,7 @@ export const Hero = () => {
 
             <div className="container max-w-3xl mx-auto text-center z-10">
                 <div className="space-y-8 ">
-                    <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4">
+                    <h1 className="text-4xl md:text-6xl font-bold text-primary-foreground mb-4">
                         <span className="opacity-0 animate-fade-in-delay-1">
                             BEM VINDO AO GUIA
                         </span>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Hero } from "./partials/Hero";
+import { Select } from "./partials/Select";
 import { Filter } from "./partials/Filter";
 import { Footer } from "../../../components/Footer";
 
@@ -8,12 +9,17 @@ export const Destinos = () => {
 
     return (
         <div className="flex flex-col">
-            <main
-                id="hero"
+            
+            <main className="min-h-screen flex items-center justify-center bg-background" id="hero">
+                <Hero />
+            </main>
+
+            <section
+                id="select"
                 className="min-h-screen flex items-center justify-center bg-primary"
             >
-                <Hero onSelectEstado={setEstadoSelecionado} />
-            </main>
+                <Select onSelectEstado={setEstadoSelecionado} />
+            </section>
 
             <section
                 className="min-h-screen flex items-center justify-center bg-background"
