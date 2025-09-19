@@ -16,19 +16,19 @@ export const Destinos = () => {
 
             <section
                 id="select"
-                className="min-h-screen flex items-center justify-center bg-primary"
+                className="min-h-screen flex items-center justify-center bg-background"
             >
                 <Select onSelectEstado={setEstadoSelecionado} />
             </section>
 
             <section
-                className="min-h-screen flex items-center justify-center bg-background"
+                className="min-h-screen flex items-center justify-center bg-primary"
                 id="filter"
             >
                 <Filter estadoSelecionado={estadoSelecionado} />
             </section>
 
-            <footer className="p-4 bg-background">
+            <footer className="p-4 bg-primary">
                 <Footer />
             </footer>
             

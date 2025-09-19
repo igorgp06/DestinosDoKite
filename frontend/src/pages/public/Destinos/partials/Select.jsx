@@ -16,9 +16,11 @@ export const Select = ({ onSelectEstado }) => {
     return (
         <div className="relative min-h-screen flex flex-col align-center justify-center px-4 pb-29 mt-8">
             <div className="container max-w-6xl mx-auto text-center">
-                <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-4 animate-fade-in-delay-1 opacity-0">
-                    Destinos
-                </h2>
+                <div className="mb-8 space-y-8">
+                    <h3 className="text-4xl md:text-5xl font-bold text-primary-foreground animate-fade-in-delay-1 opacity-0">
+                        Escoha seu Destino
+                    </h3>
+                </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center mb-8">
                     <div className="space-y-8">

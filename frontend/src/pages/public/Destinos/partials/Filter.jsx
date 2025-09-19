@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
-import Map from "./Map";
-import SchoolCard from "./SchoolCard";
-import SchoolDetails from "./SchoolDetails";
+import Map from "./components/Map";
+import SchoolCard from "./components/SchoolCard";
+import SchoolDetails from "./components/SchoolDetails";
 import { cn } from "../../../../lib/utils";
 
 export const Filter = ({ estadoSelecionado }) => {
