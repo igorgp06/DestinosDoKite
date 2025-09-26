@@ -7,7 +7,7 @@ export const Hero = () => {
             <div className="container max-w-3xl mx-auto text-center z-10">
 
                 <div className="space-y-8">
-                    <div className="">
+                    <div className="space-y-1">
 
                         <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground opacity-0 animate-fade-in-delay-1">
                             ENTRE EM CONTATO
@@ -24,7 +24,7 @@ export const Hero = () => {
                         </p>
                     </div>
 
-                    <div className="opacity-0 animate-fade-in-delay-4">
+                    <div className="opacity-0 animate-fade-in-delay-4 flex flex-col sm:flex-row justify-center gap-4">
                         <button className={cn("inline-block px-6 py-2 bg-background text-primary-foreground font-semibold",
                             "rounded-md shadow-md border border-primary-foreground",
                             "hover:bg-primary-foreground/85 hover:text-glow hover:text-black hover:scale-105 transition-all duration-300")}
@@ -34,7 +34,7 @@ export const Hero = () => {
                             Siga-nos no Instagram
                         </button>
 
-                        <button className={cn("ml-4 inline-block px-6 py-2 bg-background text-primary-foreground font-semibold",
+                        <button className={cn("inline-block px-6 py-2 bg-background text-primary-foreground font-semibold",
                             "rounded-md shadow-md border border-primary-foreground",
                             "hover:bg-primary-foreground/85 hover:text-glow hover:text-black hover:scale-105 transition-all duration-300")}
                             onClick={() => window.location.href = '#'}
