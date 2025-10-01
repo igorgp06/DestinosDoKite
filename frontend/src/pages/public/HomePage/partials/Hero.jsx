@@ -29,7 +29,7 @@ export const Hero = () => {
                 <div className="mt-10 flex justify-center items-center gap-4 flex-wrap">
                     <Link
                         to="/destinos"
-                        className={cn("inline-block px-4 py-3 bg-primary text-primary-foreground font-semibold", 
+                        className={cn("inline-block px-4 py-3 bg-primary text-primary-foreground font-semibold",
                             "rounded-md shadow-md border border-primary-foreground opacity-0 animate-fade-in-delay-4",
                             "hover:bg-background hover:text-glow transition-all duration-300"
                         )}
@@ -50,12 +50,12 @@ export const Hero = () => {
                 </div>
             </div>
 
-            <div className="absolute bottom-10 left-0 right-0 flex flex-col items-center text-primary-foreground opacity-75 animate-bounce z-16">
+            <a href="#about" className="absolute bottom-10 left-0 right-0 flex flex-col items-center text-primary-foreground opacity-75 animate-bounce z-16">
                 <span className="text-sm text-primary-foreground mb-1">Veja Mais</span>
-                <a href="#about">
-                    <ArrowDown className="h-5 w-5 text-primary hover:scale-1.10 transition-transform duration-300" />
-                </a>
-            </div>
+                <span className="hover:scale-1.10 transition-transform duration-300">
+                    <ArrowDown className="h-5 w-5 text-primary-foreground transition-transform duration-300" />
+                </span>
+            </a>
         </div>
     )
 } 
