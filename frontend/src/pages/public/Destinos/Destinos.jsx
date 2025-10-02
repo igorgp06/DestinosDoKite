@@ -28,7 +28,7 @@ export const Destinos = () => {
                 <Filter estadoSelecionado={estadoSelecionado} />
             </section>
 
-            <footer className="p-4 bg-primary">
+            <footer className="bg-primary">
                 <Footer />
             </footer>
             

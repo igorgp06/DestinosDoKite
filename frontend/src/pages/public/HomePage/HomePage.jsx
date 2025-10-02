@@ -36,7 +36,7 @@ export const HomePage = ({ children }) => {
                 <More />
             </section>
 
-            <footer className="p-4 bg-background">
+            <footer className="bg-background">
                 <Footer />
             </footer>
 

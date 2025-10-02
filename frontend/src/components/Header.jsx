@@ -6,7 +6,7 @@ import { NavLink, Link } from "react-router-dom";
 const menuItems = [
     { name: "Início", to: "/" },
     { name: "Destinos", to: "/destinos" },
-    { name: "Contato", to: "/contato" }, // TODO vai conter as percerias junto dele
+    { name: "Contato", to: "/contato" },
 ]
 
 export const Header = () => {

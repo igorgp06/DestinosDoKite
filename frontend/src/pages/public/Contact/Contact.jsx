@@ -1,5 +1,5 @@
 import { Hero } from "./partials/Hero";
-import { Partners } from "./partials/Partners";
+import { Testimonials } from "./partials/Testimonials";
 import { Form } from "./partials/Form";
 import { Footer } from "../../../components/Footer";
 
@@ -12,14 +12,14 @@ export const Contact = () => {
             </main>
 
             <section className="min-h-screen flex items-center justify-center bg-background" id="partners">
-                <Partners />
+                <Testimonials />
             </section>
 
             <section className="min-h-screen flex items-center justify-center bg-primary" id="form">
                 <Form />
             </section>
 
-            <footer className="p-4 bg-background">
+            <footer className="bg-background">
                 <Footer />
             </footer>
 
