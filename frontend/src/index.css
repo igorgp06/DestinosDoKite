@@ -99,8 +99,8 @@
 @utility text-glow {
   @apply relative;
   text-shadow: 0 0 15px var(--color-primary);
-  background: transparent;
-  background-color: transparent;
+  background: none;
+  background-color: none;
 }
 
 @utility buttons {

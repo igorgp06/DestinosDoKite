@@ -1,4 +1,4 @@
-import { Smartphone, Phone, Mail, MapPin, Instagram } from 'lucide-react';
+import { Phone, Mail, Instagram } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
@@ -9,25 +9,23 @@ export const Footer = () => {
     ];
 
     const partners = [
-        { src: '/assets/static/imgs/partners/logos/parceiro1.jpg', alt: 'Logo do parceiro 1', title: "Igor Gonçalves | DEV", href: "https://igdeveloper.com.br" },
+        { src: '/assets/static/imgs/partners/logos/parceiro1.png', alt: 'Logo do parceiro 1', title: "Igor Gonçalves | DEV", href: "https://igdeveloper.com.br" },
     ];
 
     return (
         <footer className="relative flex flex-col align-center justify-center bg-background px-5 py-13">
             <div className="container mx-auto">
 
-                <div className="space-y-4 md:space-y-6 md:grid md:grid-cols-3 gap-4">
+                <div className="space-y-4 md:grid md:grid-cols-3 gap-4">
 
                     <div className="md:col-span-1 flex flex-col justify-center items-center">
                         <div className="flex items-center mb-6 justify-center">
                             <span className="text-2xl font-bold gradient-text">Destinos do Kite</span>
                         </div>
-                        <p className="text-center justify-center text-1xl">
-                            Seu guia definitivo para as melhores escolas de kitesurf no Brasil. Encontre, explore e conecte-se com a comunidade do kitesurf!
+                        <p className="text-center justify-center text-md">
+                            O guia definitivo para as escolas de kitesurf no Brasil. Encontre, explore e conecte-se com a comunidade do kitesurf!
                         </p>
                     </div>
-
-                    {/* Quick Links */}
 
                     <div className="md:col-span-1 flex flex-col justify-center items-center">
                         <h3 className="text-xl font-bold  mb-6">Links Rápidos</h3>
@@ -36,7 +34,7 @@ export const Footer = () => {
                                 <li key={index}>
                                     <Link
                                         to={link.to}
-                                        className="text- hover:text- transition-colors"
+                                        className="text-primary-foreground hover:text-1xl hover:text-glow transition-all duration-300"
                                     >
                                         {link.name}
                                     </Link>
@@ -45,18 +43,21 @@ export const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Contact Info */}
-
                     <div className="md:col-span-1 flex flex-col justify-center items-center">
                         <h3 className="text-xl font-bold mb-6">Contato</h3>
-                        <div className="space-y-4">
-                            <div className="flex items-center space-x-3">
+                        <div className="space-y-4 text-center flex flex-col justify-center items-center">
+                            
+                            <div className="flex items-center space-x-3 hover:text-primary transition-all duration-300">
                                 <Phone className="h-5 w-5" />
-                                <span className="">(48) 99999-9999</span>
+                                <span className="">(48) 9999-9999</span>
                             </div>
-                            <div className="flex items-center space-x-3">
+                            <div className="flex items-center space-x-3 hover:underline hover:text-primary transition-all duration-300">
                                 <Instagram className="h-5 w-5" />
                                 <a className="" href="https://www.instagram.com/destinosdokite/" target="_blank">Destinos do Kite</a>
+                            </div>
+                            <div className="flex items-center space-x-3 hover:underline hover:text-primary transition-all duration-300">
+                                <Mail className="h-5 w-5" />
+                                <a href="mailto:destinosdokite@gmail.com" target="_blank">destinosdokite@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -74,7 +75,6 @@ export const Footer = () => {
                     </ul>
                 </div>
 
-                {/* Bottom Section */}
                 <div className="border-t mt-8 pt-8">
                     <div className="flex flex-col md:flex-row justify-between items-center">
                         <p className="text-sm text-primary-foreground">
