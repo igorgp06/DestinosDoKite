@@ -15,7 +15,7 @@ export const Contact = () => {
                 <Testimonials />
             </section>
 
-            <section className="min-h-screen flex items-center justify-center bg-primary" id="form">
+            <section className="min-h-screen flex items-center justify-center bg-background" id="form">
                 <Form />
             </section>
 
