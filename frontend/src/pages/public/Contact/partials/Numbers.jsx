@@ -8,7 +8,7 @@ export const Numbers = () => {
                     <div className="space-y-1">
 
 
-                        <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground opacity-0 animate-fade-in-delay-1 hover:text-glow transition-all duration-300">
+                        <h2 className="text-3xl md:text-4xl font-bold text-primary-foreground opacity-0 animate-fade-in-delay-1 hover:text-glow transition-all duration-300 mt-5">
                             Como Surgiu?
                         </h2>
 
