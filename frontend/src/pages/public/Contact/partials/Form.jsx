@@ -34,7 +34,7 @@ export const Form = () => {
                                     </div>
                                     <div>
                                         <h4 className="font-medium text-start">Telefone</h4>
-                                        <a href="https://wa.me/5548920014986" target="_blank" className="text-primary-foreground hover:text-primary-foreground/85  transition-colors duration-300 underline">
+                                        <a href="#" target="_blank" className="text-primary-foreground hover:text-primary-foreground/85  transition-colors duration-300 underline">
                                             +55 (48) 9999-9999
                                         </a>
                                     </div>
