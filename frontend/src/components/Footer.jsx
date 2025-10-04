@@ -1,4 +1,4 @@
-import { Phone, Mail, Instagram } from 'lucide-react';
+import { Mail, Instagram, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export const Footer = () => {
@@ -48,7 +48,7 @@ export const Footer = () => {
                         <div className="space-y-4 text-center flex flex-col justify-center items-center">
                             
                             <div className="flex items-center space-x-3 hover:text-primary transition-all duration-300">
-                                <Phone className="h-5 w-5" />
+                                <MessageCircle className="h-5 w-5" />
                                 <span className="">(48) 9999-9999</span>
                             </div>
                             <div className="flex items-center space-x-3 hover:underline hover:text-primary transition-all duration-300">
