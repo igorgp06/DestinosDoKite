@@ -1,20 +1,31 @@
 server:
-  port: 8080
+    port: 8080
 
 spring:
-  application:
-    name: Destinos Do Kite
+    application:
+        name: Destinos Do Kite
+    banner:
+        location: classpath:banner.txt
 
-  datasource:
-    url: jdbc:mysql://localhost:3306/kitepoints_db
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    datasource:
+        url: ${DB_URL}
+        username: ${DB_USERNAME}
+        password: ${DB_PASSWORD}
+        driver-class-name: com.mysql.cj.jdbc.Driver
 
-  jpa:
-    hibernate:
-      ddl-auto: update
-    show-sql: true
-    properties:
-      hibernate:
-        format_sql: true
+    jpa:
+        SHOW_SQL: true
+        hibernate:
+            ddl-auto: update
+
+app:
+    email:
+        from: ${EMAIL_FROM}
+    security:
+        cors:
+            allowed-origins: ${CORS_ALLOWED_ORIGINS}
+        admin:
+            username: ${ADMIN_USERNAME}
+            password: ${ADMIN_PASSWORD}
+            token-secret: ${ADMIN_TOKEN_SECRET}
+            token-expiration: 3100

@@ -1,11 +1,11 @@
 package br.com.destinosdokite.DestinosDoKite.services;
 
-import br.com.destinosdokite.DestinosDoKite.models.KitePoint;
-import br.com.destinosdokite.DestinosDoKite.repositorys.KitePointRepository;
+import java.util.Optional;
+
 import org.springframework.stereotype.Service;
 
-import java.util.List;
-import java.util.Optional;
+import br.com.destinosdokite.DestinosDoKite.models.KitePoint;
+import br.com.destinosdokite.DestinosDoKite.repositorys.KitePointRepository;
 
 @Service
 public class KitePointService {
