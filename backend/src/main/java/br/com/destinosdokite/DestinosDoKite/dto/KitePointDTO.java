@@ -1,5 +1,7 @@
 package br.com.destinosdokite.DestinosDoKite.dto;
 
+import java.util.List;
+
 import br.com.destinosdokite.DestinosDoKite.models.KitePoint;
 
 public record KitePointDTO(
@@ -10,8 +12,10 @@ public record KitePointDTO(
         String airport,
         String season,
         String description,
+        String state,
         Double latitude,
-        Double longitude
+        Double longitude,
+        List<String> images
 ) {
     public KitePointDTO(KitePoint kitePoint) {
         this(
@@ -22,8 +26,10 @@ public record KitePointDTO(
                 kitePoint.getAirport(),
                 kitePoint.getSeason(),
                 kitePoint.getDescription(),
+                kitePoint.getState(),
                 kitePoint.getLatitude(),
-                kitePoint.getLongitude()
+                kitePoint.getLongitude(),
+                kitePoint.getImages()
         );
     }
 }

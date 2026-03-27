@@ -19,8 +19,6 @@ spring:
             ddl-auto: update
 
 app:
-    email:
-        from: ${EMAIL_FROM}
     security:
         cors:
             allowed-origins: ${CORS_ALLOWED_ORIGINS}
@@ -28,4 +26,4 @@ app:
             username: ${ADMIN_USERNAME}
             password: ${ADMIN_PASSWORD}
             token-secret: ${ADMIN_TOKEN_SECRET}
-            token-expiration: 3100
+            token-expiration-seconds: 7200
