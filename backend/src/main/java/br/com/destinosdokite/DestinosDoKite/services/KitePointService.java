@@ -19,6 +19,9 @@ public class KitePointService {
     }
 
     public Optional<KitePoint> findById(Long id) {
+        if (id == null) {
+            return Optional.empty();
+        }
         return kitePointRepository.findById(id);
     }
 

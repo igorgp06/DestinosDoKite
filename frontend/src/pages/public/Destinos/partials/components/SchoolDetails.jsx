@@ -14,7 +14,7 @@ const SchoolDetails = ({ escola, onClose }) => {
                 <button onClick={onClose} className="absolute top-2 right-2">X</button>
 
                 <h2 className="text-2xl font-bold mb-2">{escola.name}</h2>
-                <p>{escola.location}</p>
+                <p>{escola.localization}</p>
                 <p>{escola.airport}</p>
                 <p>{escola.season}</p>
 

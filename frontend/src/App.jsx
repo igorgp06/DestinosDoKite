@@ -4,6 +4,7 @@ import { HomePage } from './pages/public/HomePage/HomePage'
 import { NotFound } from './pages/err/NotFound'
 import { Destinos } from './pages/public/Destinos/Destinos'
 import { Contact } from './pages/public/Contact/Contact'
+import { AdminKitePoint } from './pages/admin/AdminKitePoint'
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
           <Route index element={<HomePage />} />
           <Route path="destinos" element={<Destinos />} />
           <Route path="contato" element={<Contact />} />
+          <Route path="admin/cadastro" element={<AdminKitePoint />} />
 
         </Route>
 

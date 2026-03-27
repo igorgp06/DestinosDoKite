@@ -12,10 +12,9 @@ export const Filter = ({ estadoSelecionado }) => {
         if (!estadoSelecionado) return;
 
         const fetchData = async () => {
-            const res = await fetch("/assets/static/JSON/schools/schools.json");
+            const res = await fetch(`/api/kitepoints?state=${estadoSelecionado}`);
             const data = await res.json();
-            setEscolas(data.filter((e) => e.state ===
-                (estadoSelecionado)));
+            setEscolas(data);
         };
 
         fetchData();

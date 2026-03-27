@@ -19,7 +19,8 @@ const Map = ({ escolas, estadoSelecionado }) => {
             maxZoom: 14,
         });
 
-        L.tileLayer("", {
+        L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
 
         }).addTo(map);
 
@@ -76,8 +77,8 @@ const Map = ({ escolas, estadoSelecionado }) => {
                     iconSize: [24, 24],
                 });
 
-                const m = L.marker([e.lat, e.lng], { icon: kiteMarker })
-                    .bindPopup(`<b>${e.name}</b><br/>${e.location}`);
+                const m = L.marker([e.latitude, e.longitude], { icon: kiteMarker })
+                    .bindPopup(`<b>${e.name}</b><br/>${e.localization}`);
 
                 group.addLayer(m);
             });
